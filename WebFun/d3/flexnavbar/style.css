@@ -1,0 +1,42 @@
+
+
+.nav {
+     background-color:#333333;
+     color:white;
+     height: 100px;
+     width: 1000px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+/* h1 tags and unordered lists are both block elemtns */
+
+.nav-title {
+     margin-left: 20px;
+}
+
+.nav-links {
+     display: flex;
+     list-style-type: none;
+     align-items: center;
+     justify-content: space-between;
+     width: 40%;
+     /* list-style-type found in documentation for how to remove the bullet points */
+}
+
+.btn {
+     background-color: lightskyblue;
+     color: white;
+     margin-right: 20px;
+     height: 40px;
+     width: 100px;
+     border: none;
+     font-size: 20px;
+     box-shadow: 5px 5px black;
+}
+
+a {
+     text-decoration: none;
+     color: white;
+}

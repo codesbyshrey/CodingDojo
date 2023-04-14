@@ -1,0 +1,139 @@
+
+/* since this is a bunch of assignments put together, place the appropriate CSS within their commented sections for now and I'll make it neater afterwards */
+
+*{
+     font-family: 'Roboto', sans-serif;
+     margin: 0;
+     padding: 0;
+}
+
+/* Navbar Related CSS ------------------------------------------ */
+.navbar{
+     background-color:#333333;
+     color:white;
+     height: 100px;
+     width: 1000px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.navtitle{
+     margin-left:20px;
+}
+.navlinks{
+     display: flex;
+     list-style-type: none;
+     align-items: center;
+     justify-content: space-between;
+     width: 40%;
+}
+.btn{
+     background-color: lightskyblue;
+     color: white;
+     margin-right: 20px;
+     height: 40px;
+     width: 100px;
+     border: none;
+     font-size: 20px;
+     box-shadow: 5px 5px black;
+}
+.navlinks a{
+     /* this is written so that we specify for anchor tags inside navbar */
+     text-decoration: none;
+     color: white;
+}
+/* Navbar Related CSS END ------------------------------------------- */
+
+
+
+
+body {
+     background-color: #f3f3f3;
+}
+li {
+     text-decoration: none;
+}
+.flexmain {
+     width: 1000px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.user{
+     width: 100%;
+     background-color: white;
+     border: 5px solid grey;
+     margin-bottom: 20px;
+     border-radius: 5px;
+     font-size: 1.3rem;
+     overflow: hidden;
+}
+
+.header {
+     background-color: cyan;
+     height: 130px;
+     margin-bottom: 65px;
+}
+
+.body{
+     padding: 20px;
+}
+
+.body h1, h2, h3, p {
+     margin: 20px 0px;
+}
+
+.pfp {
+     border-radius: 50%;
+     background-color: black;
+     height: 200px;
+     padding: 5px;
+     margin-top: 20px;
+     margin-left: 20px;
+}
+
+.icon{
+     height: 20px;
+     margin-right:3px;
+}
+
+a{
+     color: blue;
+}
+
+
+
+
+
+.avatars{
+     height: 50px;
+     border-radius:50%;
+     margin-right: 10px;
+}
+
+.card{
+     background-color: white;
+     border: 2px solid grey;
+     margin-bottom: 20px;
+     border-radius: 4px;
+     font-size: 1.2rem;
+}
+.cardheader{
+     padding: 20px;
+     background-color: darkslategrey;
+     color: white;
+}
+.badge{
+     font-size: 1rem;
+     height: 24px;
+     line-height: 24px;
+     padding: 0 10px;
+     background-color: darkgrey;
+     border-radius: 12px;
+          /* I tried 50% here since it would be relative, didn't work for some reason. Hardcoded a value instead */
+     margin-right: 10px;
+}
+
+/* the solutions had an interesting method here where we can avoid positioning. Consider looking into inspect element to play around with the numbers and just figure out how to play with the dimensions to make the pfp appear halfway down. Perhaps there's a way to make them all relative to each other */

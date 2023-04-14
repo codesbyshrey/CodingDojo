@@ -1,0 +1,16 @@
+
+h1 {
+     color:rebeccapurple;
+     font-size: 50px;
+}
+p{
+     text-align: center;
+     color:limegreen;
+}
+.is-centered{
+     text-align: center;
+}
+.quote p{
+     color:darkgoldenrod;
+     font-style: italic;
+}

@@ -1,0 +1,30 @@
+.pet{
+     color:red;
+}
+* {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+div{
+     background-color: lime;
+}
+h1{
+     border:4px dotted black;
+}
+input[type="text"]{
+     width: 400px;
+}
+ul > .pet{
+     text-align:center;
+}
+main .pet{
+     color:blue;
+} 
+ol > li {
+     text-transform:capitalize;
+     vertical-align:top;
+     width: 150px;
+}
+a{
+     display:block;
+}

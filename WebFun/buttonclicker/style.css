@@ -1,0 +1,107 @@
+
+* {
+     font-family: sans-serif;
+}
+
+/* Navbar CSS */
+.navbar {
+     height: 80px;
+     background-color: slategray;
+     align-items: center;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;  
+     margin-left: 30px;
+     margin-right: 30px;
+     margin-bottom: 20px;
+}
+.navlinks {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 40%;
+     list-style-type: none;
+}
+.navtitle {
+     margin-left: 20px;
+}
+.search {
+     width: 200px;
+}
+.login {
+     background-color: lightblue;
+     margin-left: 20px;
+     margin-right: 20px;
+     width: 75px;
+     color: white;
+     border: 2px solid black;
+     box-shadow: 2px 6px 6px 0px black;
+}
+
+/* Definition CSS */
+.flexmain{
+     display: flex;
+     align-items: flex-start;
+     border: 2px solid lightgrey;
+     margin-right: 30px;
+     margin-left: 30px;
+}
+.col2 {
+     flex: 1;
+}
+.col1 {
+     flex: 2;
+}
+.ninja{
+     border: 2px solid black;
+     padding: 20px;
+     display: flex;
+     margin-bottom: 15px;
+}
+.likes{
+     background-color: gold;
+     border: 2px solid black;
+     box-shadow: 2px, 6px, 6px, 0px black;
+     width: 100px;
+}
+.definition{
+     align-items: right;
+     margin-right: 10px;
+     flex: 2;
+     text-align: center;
+     padding: 40px 0px;
+     margin-left: 20px;
+}
+.information{
+     align-items: left;
+     margin-left: 5px;
+     flex: 1;
+}
+.italics{
+     font-style: italic;
+}
+
+
+/* Dojonary is YOU CSS */
+.col2{
+     display:flex;
+     border: 2px solid black;
+     padding: 20px;
+     margin-left: 15px;
+     width: 250px;
+}
+.def3{
+     align-items: left;
+     font-size: 25px;
+}
+.addDefinition{
+     background-color: lightgreen;
+     border: 2px solid black;
+     box-shadow: 2px 6px 6px 0px black;
+     height: 50px;
+     width: 200px;
+}
+.bold{
+     font-style: bold;
+     font-size: 40px;
+}
