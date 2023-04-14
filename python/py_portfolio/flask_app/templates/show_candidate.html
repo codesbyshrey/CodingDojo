@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PyPie Derby</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="padding-top: 10% !important; background-color: plum;">
+     <div class="dash_links">
+          <a class="link-button" href="/pies">SOME POLITICS RACE</a>
+          <a class="link-button" href="/logout">LOGOUT</a>
+          <a class="link-button" href="/portfolio"> PORTFOLIO HELLO  </a>
+     </div>
+     <div class="pie_box">
+          {% if pie %}
+          <h1 class="headtext">{{pie.name}} nominated by {{creator_first}}</h1>
+          <br>
+          <p style="display: block;" class="text">
+               Faction: {{pie.filling}} with Primary Cause: {{pie.crust}}
+          </p>
+          <p class="text">Cast a Vote</p>
+          {% if user_voted == 1 %}
+          <a class="link1" href="/pie/unvote/{{pie.id}}"> Take Back Back (no Voter Fraud) </a>
+          {% else %}
+          <a class="link2" href="/pie/vote/{{pie.id}}"> Vote for this Candidate </a>
+          {% endif %}
+          {% endif %}
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> EDIT CANDIDATE INFORMATION </title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background-image: url('../static/images/th(3).jpg')">
+     <div class="dash_links">
+          <a class="link-button" href="/pies"> SOME POLITICS RACE </a>
+          <a class="link-button" href="/"> USER NOMINATION DASHBOARD </a>
+          <a class="link-button" href="/logout"> LOGOUT </a>
+          <a class="link-button" href="/portfolio"> PORTFOLIO HELLO  </a>
+     </div>
+     <div>
+          {% if pie %}
+          <h1
+               style="margin-bottom: 5%; font-size: 4vw; ; border-radius: 5px; height: auto;  background-color: aqua; padding: 3% 0 2% 2%">
+               Edit Your Candidate Information </h1>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          {% for message in messages %}
+          <p>{{message}}</p>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+          <form class="edit_form" action="/edit/{{pie.id}}/post" method="POST">
+               <h1 style="text-align: center;margin-bottom: 5%"> {{pie.name}} </h1>
+
+               <label id="tooltip" for="name" class="form-label">Candidate Name
+                    <span class="tooltiptext">2 letters or longer!</span>
+               </label>
+               <input class="form-control" type="text" value="{{pie.name}}" name="name"><br /><br /><br />
+
+               <label id="tooltip" for="filling" class="form-label">Faction
+                    <span class="tooltiptext">2 letters or longer!</span>
+               </label>
+               <input class="form-control" type="text" value="{{pie.filling}}" name="filling"><br /><br /><br />
+
+               <label id="tooltip" for="crust" class="form-label">Cause
+                    <span class="tooltiptext">2 letters or longer!</span>
+               </label>
+               <input class="form-control" type="text" value="{{pie.crust}}" name="crust"><br /><br />
+               {% endif %}
+
+               <input style="margin: 0 25%" class="input" type="submit" value="Edit Pie">
+          </form>
+     </div>
+</body>
+
+</html>

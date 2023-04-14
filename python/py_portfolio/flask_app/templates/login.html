@@ -1,0 +1,189 @@
+<!-- recipes_reg_log -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Register and Login </title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <style>
+          * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               background-image: url('../static/images/th(1).png');
+          }
+
+          #titleHolder {
+               background-color: royalblue;
+               padding: 1% 0;
+          }
+
+          .title {
+               text-align: center;
+               margin-top: 5%;
+               font-size: 5vw;
+          }
+
+          .content {
+               width: 49.5%;
+               padding: 10% 0;
+               margin: 0;
+               display: inline-flex;
+          }
+
+          .box {
+               background-color: darkgrey;
+               width: 90%;
+               height: auto;
+               margin: 0 5%;
+               padding: 10% 8% 5%;
+               border-radius: 10px;
+          }
+
+          #tooltip {
+               position: relative;
+               display: inline-block;
+          }
+
+          #tooltip .tooltiptext {
+               visibility: hidden;
+               width: 120px;
+               background-color: #555;
+               color: #fff;
+               text-align: center;
+               font-size: 10px;
+               padding: 5px 0;
+               border-radius: 6px;
+
+               position: absolute;
+               z-index: 1;
+               bottom: 125%;
+               left: 50%;
+               margin-left: -60px;
+
+               opacity: 0;
+               transition: opacity 0.3s;
+          }
+
+          #tooltip .tooltiptext::after {
+               content: "";
+               position: absolute;
+               top: 100%;
+               left: 50%;
+               margin-left: -5px;
+               border-width: 5px;
+               border-style: solid;
+               border-color: #555 transparent transparent transparent;
+          }
+
+          #tooltip:hover .tooltiptext {
+               visibility: visible;
+               opacity: 1;
+          }
+
+          .button {
+               width: 80px;
+               height: 25px;
+               border: 1px solid gray;
+               border-radius: 4px;
+               text-align: center;
+               color: azure;
+               text-decoration: none;
+               position: relative;
+               top: 10px;
+          }
+
+          .flashes {
+               list-style: none;
+               text-indent: -20px;
+               color: red;
+          }
+     </style>
+</head>
+
+<body class="body">
+     <div id="titleHolder">
+          <h1 class="title"> Welcome to Some Politics </h1>
+          <p style="text-align: center; font-size: 2vw;"> Register your account to vote, please type carefully. Repeat Email Addresses aren't allowed!! </p>
+     </div>
+     <div class="content">
+          <div class="box">
+               <form action="/register" method="POST">
+                    <h2 style="color: blue;">Register to Vote</h2>
+
+                    <ul class='flashes'>
+                         {% with register = get_flashed_messages(category_filter=["register"]) %}
+                         {% if register %}
+                         {% for message in register %}
+                         <li class={{category}}>{{ message }}</li>
+                         {% endfor %}
+                         {% endif %}
+                         {% endwith %}
+                    </ul>
+
+                    <label id="tooltip" for="first_name" class="form-label">First Name
+                         <span class="tooltiptext">Capitalize First letter</span>
+                    </label>
+                    <input class="form-control" type="text" placeholder="First Name" name="first_name">
+
+                    <label id="tooltip" for="last_name" class="form-label">Last Name
+                         <span class="tooltiptext">Capitalize First letter</span>
+                    </label>
+                    <input class="form-control" type="text" placeholder="Last Name" name="last_name">
+
+                    <label id="tooltip" for="email" class="form-label">Email Address
+                         <span class="tooltiptext">Email Format<br>(ie. abc@jlg.xyz)</span>
+                    </label>
+                    <input type="email" class="form-control" placeholder="name@example.com" name="email">
+
+                    <label id="tooltip" for="password" class="col-sm-2 col-form-label">Password
+                         <span class="tooltiptext">Must be 8-20 characters, special included</span>
+                    </label>
+                    <input type="password" class="form-control" name="password">
+
+                    <label style="width: 150px !important;" id="tooltip" for="password_confirm"
+                         class="col-sm-2 col-form-label">Confirm Password
+                         <span class="tooltiptext">Must Match Password</span>
+                    </label>
+                    <input type="password" class="form-control" name="password_confirm">
+
+                    <input style="background-color: blue;" class="button" type="submit" value="Register">
+               </form>
+          </div>
+     </div>
+     <div class="content">
+          <div class="box">
+               <form action="/login" method="POST">
+                    <h2 style="color: darkgreen;">Login</h2>
+
+                    {% with login = get_flashed_messages(category_filter=["login"]) %}
+                    {% if login %}
+                    <ul class='flashes'>
+                         {% for message in login %}
+                         <li class={{category}}>{{ message }}</li>
+                         {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="name@example.com" name="email">
+
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <input type="password" class="form-control" name="password">
+
+                    <input style="background-color: darkgreen;" class="button" type="submit" value="Login">
+               </form>
+          </div>
+     </div>
+     <script src="../static/script.js"></script>
+</body>
+
+</html>

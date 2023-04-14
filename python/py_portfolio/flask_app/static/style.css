@@ -1,0 +1,152 @@
+#tooltip {
+     position: relative;
+     display: inline-block;
+}
+
+#tooltip .tooltiptext {
+     visibility: hidden;
+     width: 120px;
+     background-color: #555;
+     color: #fff;
+     text-align: center;
+     font-size: 10px;
+     padding: 5px 0;
+     border-radius: 6px;
+
+     position: absolute;
+     z-index: 1;
+     bottom: 125%;
+     left: 50%;
+     margin-left: -60px;
+
+     opacity: 0;
+     transition: opacity 0.3s;
+}
+
+#tooltip .tooltiptext::after {
+     content: "";
+     position: absolute;
+     top: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 5px;
+     border-style: solid;
+     border-color: #555 transparent transparent transparent;
+}
+
+#tooltip:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
+}
+
+.dash_links {
+     position: absolute;
+     right: 15%;
+     top: 2%;
+     display: flex;
+     justify-content: space-evenly;
+     width: 30%;
+}
+
+body {
+     box-sizing: border-box;
+     padding: 1% 10% 10%;
+}
+
+.main {
+     display: flex;
+     height: auto;
+     margin: 0;
+     padding: 0;
+     column-gap: 5%;
+}
+
+.link-button {
+     background-color: lightgray;
+     border: 1.5px solid gray;
+     border-radius: 10px;
+     color: black;
+     text-decoration: none;
+     text-align: center;
+     font-size: 1.5vw;
+     padding: 10px 0;
+     width: 30%;
+     box-shadow: 3px 2px black;
+}
+
+.link-button:hover {
+     background-color: darkgray;
+}
+
+.input {
+     border-radius: 10px;
+     position: relative;
+     top: 20px;
+     width: 40%;
+}
+
+.input:hover {
+     background-color: darkgray;
+}
+
+.edit_form {
+     width: 70%;
+     margin: 5% 15%;
+     border: 1.5px solid black;
+     box-shadow: 4px 3px black;
+     padding: 5% 5% 10%;
+     background-color: aqua;
+}
+
+.pie_box {
+     width: 100%;
+     height: 500px;
+     margin: 30px 0px;
+     border: 2px solid black;
+     box-shadow: 4px 3px black;
+     background-color: darkgrey;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     padding: 5%;
+}
+
+.text {
+     font-size: 25px;
+     text-align: center;
+}
+
+.texthead {
+     font-size: 45px;
+     font-weight: bold;
+}
+
+.link1,
+.link2 {
+     position: absolute;
+     bottom: 30px;
+     height: 50px;
+     padding: 1% 0;
+     font-size: 2vw;
+     border: 1.5px solid gray;
+     text-decoration: none;
+     color: black;
+     text-align: center;
+}
+
+.link1 {
+     background-color: lightblue;
+     width: 20%;
+}
+
+.link1:hover {
+     color: red;
+}
+
+.link2 {
+     background-color: gray;
+     width: 30%;
+
+}
