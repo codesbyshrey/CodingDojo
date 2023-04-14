@@ -1,0 +1,1544 @@
+/* 
+  Recursively find the lowest common multiple between two numbers
+  "A common multiple is a number that is a multiple of two or more integers. 
+  The common multiples of 3 and 4 are 0, 12, 24, .... 
+  The least common multiple (LCM) of two numbers is the smallest
+  number (not zero) that is a multiple of both."
+  
+  Try writing two columns of multiples as a starting point:
+  starting with 15 and 25 and keep writing their multiples until you find the
+  lowest common one then turn this in to a step by step instruction
+  15 25
+  30 50
+  45 75
+  60 
+  75
+  75 is the first common
+*/
+
+const num1A = 1;
+const num1B = 1;
+const expected1 = 1;
+
+const num2A = 5;
+const num2B = 10;
+const expected2 = 10;
+
+const num3A = 10;
+const num3B = 5;
+const expected3 = 10;
+
+const num4A = 6;
+const num4B = 8;
+const expected4 = 24;
+
+const num5A = 15;
+const num5B = 25;
+const expected5 = 75;
+
+/**
+ * Add params if needed for recursion
+ * Finds the lowest common multiple of the two given ints.
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} The lowest common multiple of the given ints.
+ */
+function lowestCommonMultiple(a, b) {}
+
+/*****************************************************************************/
+
+/* 
+  Binary String Expansion
+  You are given a STRING containing chars "0", "1", and "?"
+  For every "?" character, either "0" or "1" can be substituted.
+  Write a recursive function to return array of all valid strings with "?" chars expanded to "0" or "1". 
+*/
+
+const two_str1 = "1?0?";
+const two_expected1 = ["1000", "1001", "1100", "1101"];
+// output list order does not matter
+
+/**
+ * Add params if needed for recursion
+ * Expands a string such that each "?" in the given string will be replaced
+ * with a "0" and a "1".
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str The string containing to expand.
+ * @returns {Array<string>} The expanded versions of the given string.
+ */
+function binaryStringExpansion(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/*
+  Sum To One Digit
+  Implement a function sumToOne(num)​ that,
+  given a number, sums that number’s digits
+  repeatedly until the sum is only one digit. Return
+  that final one digit result.
+  Tips:
+    to access digits from a number, need to convert it .toString() to access each digit via index
+    parseInt(arg) returns arg parsed as an integer, or NaN if it couldn't be converted to an int
+    isNaN(arg) used to check if something is NaN
+*/
+
+const num1 = 5;
+const expected1 = 5;
+
+const num2 = 10;
+const expected2 = 1;
+
+const num3 = 25;
+const expected3 = 7;
+
+/**
+ * Sums the given number's digits until the number becomes one digit.
+ * @param {number} num The number to sum to one digit.
+ * @returns {number} One digit.
+ */
+function sumToOneDigit(num) {}
+
+/*****************************************************************************/
+
+/* 
+  String Anagrams
+  Given a string,
+  return array where each element is a string representing a different anagram (a different sequence of the letters in that string).
+  Ok to use built in methods
+*/
+
+const two_str1 = "lim";
+const two_expected1 = ["ilm", "iml", "lim", "lmi", "mil", "mli"];
+// Order of the output array does not matter
+
+/**
+ * Add params if needed for recursion.
+ * Generates all anagrams of the given str.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {Array<string>} All anagrams of the given str.
+ */
+function generateAnagrams(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Recursively reverse a string
+  helpful methods:
+  str.slice(beginIndex[, endIndex])
+  returns a new string from beginIndex to endIndex exclusive
+*/
+
+const str1 = "abc";
+const expected1 = "cba";
+
+const str2 = "";
+const expected2 = "";
+
+/**
+ * Recursively reverses a string.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {string} The given str reversed.
+ * 
+ * - edge case
+ * - base case
+ * - recursive call
+ */
+function reverseStr(str) {}
+
+/*****************************************************************************/
+
+/*
+  Recursive Binary Search
+  Input: SORTED array of ints, int value
+  Output: bool representing if value is found
+  Recursively search to find if the value exists, do not loop over every element.
+  Approach:
+  Take the middle item and compare it to the given value.
+  Based on that comparison, narrow your search to a particular section of the array
+*/
+
+const two_nums1 = [1, 3, 5, 6];
+const two_searchNum1 = 4;
+const two_expected1 = false;
+
+const two_nums2 = [4, 5, 6, 8, 12];
+const two_searchNum2 = 5;
+const two_expected2 = true;
+
+const two_nums3 = [3, 4, 6, 8, 12];
+const two_searchNum3 = 3;
+const two_expected3 = true;
+
+/**
+ * Add params if needed for recursion
+ * Recursively performs a binary search (divide and conquer) to determine if
+ * the given sorted nums array contains the given number to search for.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} sortedNums
+ * @param {number} searchNum
+ * @returns {boolean} Whether the searchNum was found in the sortedNums array.
+ */
+function binarySearch(sortedNums, searchNum) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Recursive Factorial
+  Input: integer
+  Output: integer, product of ints from 1 up to given integer
+  
+  If less than zero, treat as zero.
+  Bonus: If not integer, truncate (remove decimals).
+  
+  Experts tell us 0! is 1.
+  
+  rFact(3) = 6 (1*2*3)
+  rFact(6.8) = 720 (1*2*3*4*5*6)
+*/
+
+const num1 = 3;
+const expected1 = 6;
+// Explanation: 1*2*3 = 6
+
+const num2 = 6.8;
+const expected2 = 720;
+// Explanation: 1*2*3*4*5*6 = 720
+
+const num3 = 0;
+const expected3 = 1;
+
+/**
+ * Recursively multiples 1 to the given int.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} n The int to factorial. Treat negatives as zero and
+ *    floor decimals.
+ * @returns {number} The result of !n.
+ */
+function factorial(n) {}
+
+/*****************************************************************************/
+/* 
+  Return the fibonacci number at the nth position, recursively.
+  
+  Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+  The next number is found by adding up the two numbers before it,
+  starting with 0 and 1 as the first two numbers of the sequence.
+*/
+
+const two_num1 = 0;
+const two_expected1 = 0;
+
+const two_num2 = 1;
+const two_expected2 = 1;
+
+const two_num3 = 2;
+const two_expected3 = 1;
+
+const two_num4 = 3;
+const two_expected4 = 2;
+
+const two_num5 = 4;
+const two_expected5 = 3;
+
+const two_num6 = 8;
+const two_expected6 = 21;
+
+/**
+ * Recursively finds the nth number in the fibonacci sequence.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} num The position of the desired number in the fibonacci sequence.
+ * @returns {number} The fibonacci number at the given position.
+ */
+function fibonacci(num) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Recursively sum an arr of ints
+*/
+
+const nums1 = [1, 2, 3];
+const expected1 = 6;
+
+const nums2 = [1];
+const expected2 = 1;
+
+const nums3 = [];
+const expected3 = 0;
+
+/**
+ * Add params if needed for recursion
+ * Recursively sums the given array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} nums
+ * @returns {number} The sum of the given nums.
+ * 
+ * edge case -> optional
+ * base case -> required
+ * recursive call -> required
+ */
+function sumArr(nums) {}
+
+/*****************************************************************************/
+
+/* 
+Recursive Sigma
+Input: integer
+Output: sum of integers from 1 to Input integer
+*/
+
+const two_num1 = 5;
+const two_expected1 = 15;
+// Explanation: (1+2+3+4+5)
+
+const two_num2 = 2.5;
+const two_expected2 = 3;
+// Explanation: (1+2)
+
+const two_num3 = -1;
+const two_expected3 = 0;
+
+/**
+ * Recursively sum the given int and every previous positive int.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} num
+ * @returns {number}
+ */
+function recursiveSigma(num) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Array: Mode
+  
+  Create a function that, given an array of ints,
+  returns the int that occurs most frequently in the array.
+  What if there are multiple items that occur the same number of time?
+    - return all of them (in an array)
+    - what if all items occur the same number of times?
+      - return empty array
+*/
+
+const nums1 = [];
+const expected1 = [];
+
+const nums2 = [1];
+const expected2 = [1];
+
+const nums3 = [5, 1, 4];
+const expected3 = [];
+
+const nums4 = [5, 1, 4, 1];
+const expected4 = [1];
+
+const nums5 = [5, 1, 4, 1, 5];
+const expected5 = [5, 1];
+//  - order doesn't matter
+
+/**
+ * Finds the mode or all modes if there are more than one. The mode is the
+ *    value which occurs the most times in the given array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} nums Test
+ * @returns {Array<number>} Mode or modes in any order.
+ */
+function mode(nums) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Missing Value
+  You are given an array of length N that contains, in no particular order,
+  integers from 0 to N . One integer value is missing.
+  Quickly determine and return the missing value.
+*/
+
+const two_nums1 = [3, 0, 1];
+const two_expected1 = 2;
+
+const two_nums2 = [3, 0, 1, 2];
+const two_expected2 = null;
+// Explanation: nothing is missing
+
+/* 
+  Bonus: now the lowest value can now be any integer (including negatives),
+  instead of always being 0. 
+*/
+
+const two_nums3 = [2, -4, 0, -3, -2, 1];
+const two_expected3 = -1;
+
+const two_nums4 = [5, 2, 7, 8, 4, 9, 3];
+const two_expected4 = 6;
+
+/**
+ * Determines what the missing int is in the given unordered array of ints
+ *    which spans from 0 to N where only one int is missing. With this missing
+ *    int, a consecutive sequence of ints could be formed from the array.
+ * Bonus: Given ints can span from N to M (start and end anywhere).
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} unorderedNums
+ * @returns {number|null} The missing integer needed to be able to form an unbroken
+ *    consecutive set of integers from the given array or null if none is missing.
+ */
+function missingValue(unorderedNums) {}
+
+/* 
+  Given an int to represent how much change is needed
+  calculate the fewest number of coins needed to create that change,
+  using the standard US denominations
+*/
+
+const cents1 = 25;
+const expected1 = { quarter: 1 };
+
+const cents2 = 50;
+const expected2 = { quarter: 2 };
+
+const cents3 = 9;
+const expected3 = { nickel: 1, penny: 4 };
+
+const cents4 = 99;
+const expected4 = { quarter: 3, dime: 2, penny: 4 };
+
+/**
+ * Calculates the fewest coins of the standard American denominations needed
+ *    to reach the given cents amount.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} cents
+ * @param {string} sick
+ * @returns {Object<string, number>} - A denomination table where the keys are
+ *    denomination names and the value is the amount of that denomination
+ *    needed.
+ */
+function fewestCoinChange(cents) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+
+/* 
+  Given an array of integers
+  return the first integer from the array that is not repeated anywhere else
+  If there are multiple non-repeated integers in the array,
+  the "first" one will be the one with the lowest index.
+*/
+
+const nums1 = [3, 5, 4, 3, 4, 6, 5];
+const expected1 = 6;
+
+const nums2 = [3, 5, 5];
+const expected2 = 3;
+
+const nums3 = [3, 3, 5];
+const expected3 = 5;
+
+const nums4 = [5];
+const expected4 = 5;
+
+const nums5 = [];
+const expected5 = null;
+
+/**
+ * Finds the first int from the given array that has no duplicates. I.e., the
+ *    item at the lowest index that doesn't appear again in the given array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} nums
+ * @returns {number|null} The first int value from the given array that has no
+ *    dupes or null if there is none.
+ */
+function firstNonRepeated(nums) {}
+
+/* 
+  Given a SORTED array of integers, dedupe the array 
+  Because array elements are already in order, all duplicate values will be grouped together.
+  Ok to use a new array
+  Bonus: do it in O(n) time (no nested loops, new array ok)
+  Bonus: Do it in-place (no new array)
+  Bonus: Do it in-place in O(n) time and no new array
+  Bonus: Keep it O(n) time even if it is not sorted
+*/
+
+const nums1 = [1, 1, 1, 1];
+const expected1 = [1];
+
+const nums2 = [1, 1, 2, 2, 3, 3];
+const expected2 = [1, 2, 3];
+
+const nums3 = [1, 1, 2, 3, 3, 4];
+const expected3 = [1, 2, 3, 4];
+
+const nums4 = [1, 1];
+const expected4 = [1];
+
+/**
+ * De-dupes the given sorted array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} nums
+ * @returns {Array<number>} The given array deduped.
+ */
+function dedupeSorted(nums) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Array: Binary Search (non recursive)
+  Given a sorted array and a value, return whether the array contains that value.
+  Do not sequentially iterate the array. Instead, ‘divide and conquer’,
+  taking advantage of the fact that the array is sorted .
+  Bonus (alumni interview): 
+    first complete it without the bonus, because they ask for additions
+    after the initial algo is complete
+    return how many times the given number occurs
+*/
+
+const two_nums1 = [1, 3, 5, 6];
+const two_searchNum1 = 4;
+const two_expected1 = false;
+
+const two_nums2 = [4, 5, 6, 8, 12];
+const two_searchNum2 = 5;
+const two_expected2 = true;
+
+const two_nums3 = [3, 4, 6, 8, 12];
+const two_searchNum3 = 3;
+const two_expected3 = true;
+
+// bonus, how many times does the search num appear?
+const two_nums4 = [2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9];
+const two_searchNum4 = 2;
+const two_expected4 = 4;
+
+/**
+ * Efficiently determines if the given num exists in the given array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} sortedNums
+ * @param {number} searchNum
+ * @returns {boolean} Whether the given num exists in the given array.
+ */
+function binarySearch(sortedNums, searchNum) {}
+
+/* 
+  Given two arrays, interleave them into one new array.
+  The arrays may be different lengths. The extra items should be added to the
+  back of the new array.
+*/
+
+const arrA1 = [1, 2, 3];
+const arrB1 = ["a", "b", "c"];
+const expected1 = [1, "a", 2, "b", 3, "c"];
+
+const arrA2 = [1, 3];
+const arrB2 = [2, 4, 6, 8];
+const expected2 = [1, 2, 3, 4, 6, 8];
+
+const arrA3 = [1, 3, 5, 7];
+const arrB3 = [2, 4];
+const expected3 = [1, 2, 3, 4, 5, 7];
+
+const arrA4 = [];
+const arrB4 = [42, 0, 6];
+const expected4 = [42, 0, 6];
+
+/**
+ * Interleaves two arrays into a new array. Interleaving means alternating
+ * the items starting from the first array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<any>} arr1
+ * @param {Array<any>} arr2
+ * @returns {Array<any>} A new array of interleaved items.
+ */
+function interleaveArrays(arr1, arr2) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+Given an array of ints representing a line of people where the space between
+indexes is 1 foot, with 0 meaning no one is there and 1 meaning someone is in
+that space,
+return whether or not there is at least 6 feet separating every person.
+Bonus: O(n) linear time (avoid nested loops that cause re-visiting indexes).
+*/
+
+const queue1 = [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1];
+const expected1 = false;
+
+const queue2 = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];
+const expected2 = true;
+
+const queue3 = [1, 0, 0, 0, 0, 0, 0, 0, 1];
+const expected3 = true;
+
+const queue4 = [];
+const expected4 = true;
+
+/**
+ * Determines whether each occupied space in the line of people is separated by
+ * 6 empty spaces.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<0|1>} queue
+ * @returns {Boolean}
+ */
+function socialDistancingEnforcer(queue) {}
+
+/*****************************************************************************/
+
+/* 
+  Balance Index
+  Here, a balance point is ON an index, not between indices.
+  Return the balance index where sums are equal on either side
+  (exclude its own value).
+  
+  Return -1 if none exist.
+  
+*/
+
+const two_nums1 = [-2, 5, 7, 0, 3];
+const two_expected1 = 2;
+
+const two_nums2 = [9, 9];
+const two_expected2 = -1;
+
+/**
+ * Finds the balance index in the given array where the sum to the left of the
+ *    index is equal to the sum to the right of the index.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<number>} nums
+ * @returns {number} The balance index or -1 if there is none.
+ */
+function balanceIndex(nums) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Given a string that may have extra spaces at the start and the end,
+  return a new string that has the extra spaces at the start and the end trimmed (removed)
+  do not remove any other spaces.
+*/
+
+const str1 = "   hello world     ";
+const expected1 = "hello world";
+
+const str2 = "   hello  darkness my   old    friend     ";
+const expected2 = "hello  darkness my   old    friend";
+
+/**
+ * Trims any leading or trailing white space from the given str.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {string} The given string with any leading or trailing white space
+ *    stripped.
+ */
+function trim(str) {}
+
+function trim(str) {
+    let startIdx = 0
+    let endIdx = str.length - 1
+
+
+    while (str[startIdx] == " ") {
+        startIdx++
+    }
+
+    while (str[endIdx] == " ") {
+        endIdx--
+    }
+
+    return mySlice(str, startIdx, endIdx)
+
+}
+
+function mySlice(str, startIdx, endIdx){
+    let newStr = ""
+    for (let i=startIdx; i<endIdx+1; i++){
+        newStr += str[i]
+    }
+    return newStr
+}
+
+/*****************************************************************************/
+
+/* 
+  An anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+  typically using all the original letters exactly once.
+  Is there a quick way to determine if they aren't an anagram before spending more time?
+  Given two strings
+  return whether or not they are anagrams
+*/
+
+const two_strA1 = "yes";
+const two_strB1 = "eys";
+const two_expected1 = true;
+
+const two_strA2 = "yes";
+const two_strB2 = "eYs";
+const two_expected2 = true;
+
+const two_strA3 = "no";
+const two_strB3 = "noo";
+const two_expected3 = false;
+
+const two_strA4 = "silent";
+const two_strB4 = "listen";
+const two_expected4 = true;
+
+/**
+ * Determines whether s1 and s2 are anagrams of each other.
+ * Anagrams have all the same letters but in different orders.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} s1
+ * @param {string} s2
+ * @returns {boolean} Whether s1 and s2 are anagrams.
+ */
+function isAnagram(s1, s2) {}
+
+function isAnagram(s1, s2) {
+    if (s1.length !== s2.length) return false
+
+    const s1CharFreq = {}
+    const s2CharFreq = {}
+
+    for (let i=0; i<s1.length; i++){
+        const s1CharLower = s1[i].toLowerCase()
+        const s2CharLower = s2[i].toLowerCase()
+
+        if (s1CharFreq.hasOwnProperty(s1CharLower)){
+            s1CharFreq[s1CharLower]++
+        } else {
+            s1CharFreq[s1CharLower] = 1
+        }
+
+        if (s2CharFreq.hasOwnProperty(s2CharLower)){
+            s2CharFreq[s2CharLower]++
+        } else {
+            s2CharFreq[s2CharLower] = 1
+        }
+    }
+
+    for (const char in s1CharFreq){
+        if (!s2CharFreq.hasOwnProperty(char)){
+            return false
+        }
+
+        if (s1CharFreq[char] !== s2CharFreq[char]){
+            return false
+        }
+    }
+    return true
+}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+
+/* 
+  Create the function isRotation(str1,str2) that
+  returns whether the second string is a rotation of the first.
+*/
+
+const two_strA1 = "ABCD";
+const two_strB1 = "CDAB";
+// Explanation: if you start from A in the 2nd string, the letters are in the same order, just rotated
+const two_expected1 = true;
+
+const two_strA2 = "ABCD";
+const two_strB2 = "CDBA";
+// Explanation: all same letters in 2nd string, but out of order
+const two_expected2 = false;
+
+const two_strA3 = "ABCD";
+const two_strB3 = "BCDAB";
+// Explanation: same letters in correct order but there is an extra letter.
+const two_expected3 = false;
+
+/**
+ * Determines whether the second string is a rotated version of the first.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} s1
+ * @param {string} s2
+ * @returns {boolean} Whether the second string is a rotated version of the 1st.
+ */
+function isRotation(s1, s2) {}
+
+/* 
+  String: Rotate String
+  Create a standalone function that accepts a string and an integer,
+  and rotates the characters in the string to the right by that given
+  integer amount.
+*/
+
+const str = "Hello World";
+
+const rotateAmnt1 = 0;
+const expected1 = "Hello World";
+
+const rotateAmnt2 = 1;
+const expected2 = "dHello Worl";
+
+const rotateAmnt3 = 2;
+const expected3 = "ldHello Wor";
+
+const rotateAmnt4 = 4;
+const expected4 = "orldHello W";
+
+const rotateAmnt5 = 13;
+const expected5 = "ldHello Wor";
+/* 
+Explanation: this is 2 more than the length so it ends up being the same
+as rotating it 2 characters because after rotating every letter it gets back
+to the original position.
+*/
+
+/**
+ * Rotates a given string's characters to the right by the given amount,
+ * wrapping characters to the beginning.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @param {number} amnt The amount of characters in the given str to rotate to the
+ *    right.
+ * @returns {string} The string rotated by the given amount.
+ */
+function rotateStr(str, amnt) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/**
+ * - Time: O(n * m) where n = str.length and m = opens.length,
+ *    since opens.length is constant length of 3 -> O(3n) -> O(n) linear.
+ * - Space: O(n) linear.
+ * @param {string} str
+ * @returns {boolean}
+ */
+function bracesValid2(str = "") {
+  const stack = [];
+  const opens = "({[";
+  const closeToOpen = { ")": "(", "}": "{", "]": "[" };
+
+  for (let i = 0; i < str.length; i++) {
+    if (opens.includes(str[i])) {
+      stack.push(str[i]);
+    } else if (str[i] in closeToOpen) {
+      if (closeToOpen[str[i]] === stack[stack.length - 1]) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    }
+  }
+  return stack.length === 0;
+}
+
+
+/* 
+Parens Valid
+Given an str that has parenthesis in it
+return whether the parenthesis are valid
+*/
+
+const str1 = "Y(3(p)p(3)r)s";
+const expected1 = true;
+
+const str2 = "N(0(p)3";
+const expected2 = false;
+// Explanation: not every parenthesis is closed.
+
+const str3 = "N(0)t ) 0(k";
+const expected3 = false;
+// Explanation: because the second ")" is premature: there is nothing open for it to close.
+
+const str4 = "a(b))(c";
+const expected4 = false;
+// Explanation: same number of opens and closes but the 2nd closing closes nothing.
+
+/**
+ * Determines whether the parenthesis in the given string are valid.
+ * Each opening parenthesis must have exactly one closing parenthesis.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {boolean} Whether the parenthesis are valid.
+ */
+function parensValid(str) {}
+
+// ******************************************************
+
+/* 
+Braces Valid
+Given a string sequence of parentheses, braces and brackets, determine whether it is valid. 
+*/
+
+const two_str1 = "W(a{t}s[o(n{ c}o)m]e )h[e{r}e]!";
+const two_expected1 = true;
+
+const two_str2 = "D(i{a}l[ t]o)n{e";
+const two_expected2 = false;
+
+const two_str3 = "A(1)s[O (n]0{t) 0}k";
+const two_expected3 = false;
+
+/**
+ * Determines whether the string's braces, brackets, and parenthesis are valid
+ * based on the order and amount of opening and closing pairs.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {boolean} Whether the given strings braces are valid.
+ */
+function bracesValid(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Reverse Word Order
+  Given a string of words (with spaces)
+  return a new string with words in reverse sequence.
+*/
+
+const str1 = "This is a test";
+const expected1 = "test a is This";
+
+const str2 = "hello";
+const expected2 = "hello";
+
+const str3 = "   This  is a   test  ";
+const expected3 = "test a is This";
+
+/**
+ * Reverses the order of the words but not the words themselves form the given
+ * string of space separated words.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} wordsStr A string containing space separated words.
+ * @returns {string} The given string with the word order reversed but the words
+ *    themselves are not reversed.
+ */
+function reverseWordOrder(wordsStr) {}
+
+/*****************************************************************************/
+
+/* 
+  Given a string,
+  return a new string with the duplicates excluded
+  Bonus: Keep only the last instance of each character.
+*/
+
+const two_str1 = "abcABC";
+const two_expected1 = "abcABC";
+
+const two_str2 = "helloo";
+const two_expected2 = "helo";
+
+const two_str5 = "hellool";
+const two_expected5 = "heol";
+
+const two_str3 = "";
+const two_expected3 = "";
+
+const two_str4 = "aa";
+const two_expected4 = "a";
+
+/**
+ * De-dupes the given string.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str A string that may contain duplicates.
+ * @returns {string} The given string with any duplicate characters removed.
+ */
+function stringDedupe(str) {}
+
+/**
+ * - Time: O(n) linear.
+ * - Space: O(2n) -> O(n) linear.
+ * @param {string} str
+ * @returns {string}
+ */
+function stringDedupe(str = "") {
+  let distinctStr = "";
+  const seen = {};
+
+  // loop backwards to include last occurrence
+  for (let i = str.length - 1; i >= 0; --i) {
+    if (!seen[str[i]]) {
+      distinctStr = str[i] + distinctStr;
+      seen[str[i]] = true;
+    }
+  }
+  return distinctStr;
+}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  Given an array of strings
+  return the number of times each string occurs (a frequency / hash table)
+*/
+
+const arr1 = ["a", "a", "a"];
+const expected1 = {
+  a: 3,
+};
+
+const arr2 = ["a", "b", "a", "c", "B", "c", "c", "d"];
+const expected2 = {
+  a: 2,
+  b: 1,
+  c: 3,
+  B: 1,
+  d: 1,
+};
+
+const arr3 = [];
+const expected3 = {};
+
+/**
+ * Builds a frequency table based on the given array.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<string>} arr
+ * @returns {Object<string, number>} A frequency table where the keys are items
+ *    from the given arr and the values are the amnt of times that item occurs.
+ */
+function makeFrequencyTable(arr) {}
+
+/*****************************************************************************/
+
+/* 
+Given a non-empty array of odd length containing ints where every int but one
+has a matching pair (another int that is the same)
+return the only int that has no matching pair.
+*/
+
+const two_nums1 = [1];
+const two_expected1 = 1;
+
+const two_nums2 = [5, 4, 5];
+const two_expected2 = 4;
+
+const two_nums3 = [5, 4, 3, 4, 3, 4, 5];
+const two_expected3 = 4; // there is a pair of 4s but one 4 has no pair.
+
+const two_nums4 = [5, 2, 6, 2, 3, 1, 6, 3, 2, 5, 2];
+const two_expected4 = 1;
+
+function oddOccurrencesInArray(nums) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/**
+ * - Time: O(n^3). Cubed. The nested for loops make it n^2, but then there
+ *    is a 3rd loop that is nested from the slice which in the worst case
+ *    slices the whole string. We focus on the worst case even though all
+ *    but one iteration is not slicing the whole string.
+ * - Space: O(n) linear.
+ */
+function longestPalindromicSubstring(str = "") {
+  let longestPalindrome = str[0];
+
+  // generate every sub string 1 at a time and check
+  // if it is a palindrome and how long it is.
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length + 1; j++) {
+      let subStr = str.slice(i, j);
+
+      // No need to check if it is a palindrome if it can't be longer.
+      if (subStr.length > longestPalindrome.length && isPalindrome(subStr)) {
+        longestPalindrome = subStr;
+      }
+    }
+  }
+  return longestPalindrome;
+}
+
+/* 
+  Invert Hash
+  A hash table / hash map is an obj / dictionary
+  Given an object / dict,
+  return a new object / dict that has the keys and the values swapped so that the keys become the values and the values become the keys
+*/
+
+const two_obj1 = { name: "Zaphod", charm: "high", morals: "dicey" };
+const two_expected1 = { Zaphod: "name", high: "charm", dicey: "morals" };
+
+// ****************** Potential Edge Cases *************************
+
+const two_obj2 = { name: "Zaphod", charm: "high", morals: "dicey", something:"dicey" };
+const two_expected2 = { Zaphod: "name", high: "charm", dicey: ["morals", "something"] };
+const two_expected3 = { Zaphod: "name", high: "charm", dicey: "morals", dicey2: "something" };
+
+/**
+ * Inverts the given object's key value pairs so that the original values
+ * become the keys and the original keys become the values.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Object<string, any>} obj
+ * @return The given object with key value pairs inverted.
+ */
+function invertObj(obj) {}
+
+
+/* 
+  Zip Arrays into Map
+  
+  
+  Given two arrays, create an associative array (aka hash map, an obj / dictionary) containing keys from the first array, and values from the second.
+  Associative arrays are sometimes called maps because a key (string) maps to a value 
+ */
+
+const keys1 = ["abc", 3, "yo"];
+const vals1 = [42, "wassup", true];
+const expected1 = {
+  abc: 42,
+  3: "wassup",
+  yo: true,
+};
+
+const keys2 = [];
+const vals2 = [];
+const expected2 = {};
+
+// ****************** Potential Edge Cases *************************
+// Can you have a bool as a key??
+const keys3 = ["abc", 3, "yo", true];
+const vals3 = [42, "wassup", true, 5];
+const expected3 = '?'
+
+const keys4 = ["abc", 3, "yo", 'something'];
+const vals4 = [42, "wassup", true];
+const expected4 = {
+  abc: 42,
+  3: "wassup",
+  yo: true,
+  something: undefined
+};
+
+const keys5 = ["abc", 3, "yo"];
+const vals5 = [42, "wassup", true, 'something'];
+const expected5 = false
+
+
+/**
+ * Converts the given arrays of keys and values into an object.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {Array<string>} keys
+ * @param {Array<any>} values
+ * @returns {Object} The object with the given keys and values.
+ */
+function zipArraysIntoMap(keys, values) {}
+
+
+/* 
+String: Is Palindrome
+Create a function that returns a boolean whether the string is a strict palindrome. 
+- palindrome = string that is same forwards and backwards
+
+Do not ignore spaces, punctuation and capitalization
+*/
+
+const str1 = "a x a";
+const expected1 = true;
+
+const str2 = "racecar";
+const expected2 = true;
+
+const str3 = "Dud";
+const expected3 = false;
+
+const str4 = "oho!";
+const expected4 = false;
+
+/**
+ * Determines if the given str is a palindrome (same forwards and backwards).
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {boolean} Whether the given str is a palindrome or not.
+ */
+function isPalindrome(str) {}
+
+/*****************************************************************************/
+
+/* 
+  Longest Palindrome
+  For this challenge, we will look not only at the entire string provided,
+  but also at the substrings within it.
+  Return the longest palindromic substring. 
+  Strings longer or shorter than complete words are OK.
+  All the substrings of "abc" are:
+  a, ab, abc, b, bc, c
+*/
+
+const two_str1 = "what up, daddy-o?";
+const two_expected1 = "dad";
+
+const two_str2 = "uh, not much";
+const two_expected2 = "u";
+
+const two_str3 = "Yikes! my favorite racecar erupted!";
+const two_expected3 = "e racecar e";
+
+const two_str4 = "a1001x20002y5677765z";
+const two_expected4 = "5677765";
+
+const two_str5 = "a1001x20002y567765z";
+const two_expected5 = "567765";
+
+/**
+ * Finds the longest palindromic substring in the given string.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str
+ * @returns {string} The longest palindromic substring from the given string.
+ */
+function longestPalindromicSubstring(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+Given in an alumni interview in 2021.
+String Encode
+You are given a string that may contain sequences of consecutive characters.
+Create a function to shorten a string by including the character,
+then the number of times it appears. 
+
+
+If final result is not shorter (such as "bb" => "b2" ),
+return the original string.
+*/
+
+const str1 = "aaaabbcdddaa";
+const expected1 = "a4b2c1d3a2";
+
+const str2 = "";
+const expected2 = "";
+
+const str3 = "a";
+const expected3 = "a";
+
+const str4 = "bbcc";
+const expected4 = "bbcc";
+
+
+/**
+ * Encodes the given string such that duplicate characters appear once followed
+ * by a number representing how many times the char occurs. Only encode strings
+ * when the result yields a shorter length.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str The string to encode.
+ * @returns {string} The given string encoded.
+ */
+function encodeStr(str) {}
+
+/*****************************************************************************/
+
+
+/* 
+  String Decode  
+*/
+
+const two_str1 = "a3b2c1d3";
+const two_expected1 = "aaabbcddd";
+
+const two_str2 = "a3b2c12d10";
+const two_expected2 = "aaabbccccccccccccdddddddddd";
+
+/**
+ * Decodes the given string by duplicating each character by the following int
+ * amount if there is an int after the character.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str An encoded string with characters that may have an int
+ *    after indicating how many times the character occurs.
+ * @returns {string} The given str decoded / expanded.
+ */
+function decodeStr(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
+/* 
+  String: Reverse
+  Given a string,
+  return a new string that is the given string reversed
+*/
+
+const str1 = "creature";
+const expected1 = "erutaerc";
+
+const str2 = "dog";
+const expected2 = "god";
+
+const str3 = "hello";
+const expected3 = "olleh";
+
+const str4 = "";
+const expected4 = "";
+
+/**
+ * Reverses the given str.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} str String to be reversed.
+ * @returns {string} The given str reversed.
+ * 
+ * - create a function that takes in a string
+ * - create var to hold new string
+ * - start a loop from the end of the given string
+ *      - add the current character to the new string
+ * - return new string
+ */
+function reverseString(str) {}
+
+/*****************************************************************************/
+
+/* 
+  Acronyms
+  Create a function that, given a string, returns the string’s acronym 
+  (first letter of each word capitalized). 
+  Do it with .split first if you need to, then try to do it without
+*/
+
+const two_str1 = "object oriented programming";
+const two_expected1 = "OOP";
+
+// The 4 pillars of OOP
+const two_str2 = "abstraction polymorphism inheritance encapsulation";
+const two_expected2 = "APIE";
+
+const two_str3 = "software development life cycle";
+const two_expected3 = "SDLC";
+
+// Bonus: ignore extra spaces
+const two_str4 = "  global   information tracker    ";
+const two_expected4 = "GIT";
+
+/**
+ * Turns the given str into an acronym.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} wordsStr A string to be turned into an acronym.
+ * @returns {string} The acronym.
+ */
+function acronymize(str) {}
+
+-----------------------------------------------------------
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+ASDF
+------------------------------------------------------------
+
