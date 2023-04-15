@@ -1,0 +1,7 @@
+/* welcome to css */
+/* can you do CSS resets in a flask environment since it only views the HTML as a template? curious */
+
+table, th, td {
+     border: 2px solid black;
+     border-collapse: collapse;
+}

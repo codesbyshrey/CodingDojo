@@ -1,0 +1,22 @@
+.color1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.box1 {
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 50px;
+     height: 150px;
+     gap: 50px;
+}
+
+.multiple_Box {
+     background-color: aquamarine;
+     border: 3px solid black;
+     padding: 100px;
+     border-radius: 10%;
+     height: 50px;
+     width: 50px;
+}

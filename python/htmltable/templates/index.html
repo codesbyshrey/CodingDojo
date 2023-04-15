@@ -1,0 +1,32 @@
+<!-- HTML TABLE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <title> HTML TABLE </title>
+</head>
+<body>
+     <h1> HTML TABLE </h1>
+     <table class="table">
+          <tr>
+               <th> First Name </th>
+               <th> Last Name </th>
+               <th> Full Name </th>
+          </tr>
+
+          <tbody>
+               {% for i in range(user | length) %}
+               <tr>
+                    <td> {{ user[i]['first_name'] }}</td>
+                    <td> {{ user[i]['last_name'] }}</td>
+                    <td> {{ user[i]['first_name'] }} {{ user[i]['last_name'] }} </td>
+               </tr>
+               {% endfor %}
+
+          </tbody>
+     </table>
+</body>
+</html>
