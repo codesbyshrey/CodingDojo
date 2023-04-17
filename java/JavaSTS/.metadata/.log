@@ -12244,3 +12244,21 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-17 02:01:12.619
+!MESSAGE [Info]	ESLint server running in node v18.15.0
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-04-17 02:01:12.677
+!MESSAGE [Warning]	Using Typescript version (user-setting) 5.0.3 from path "/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.4.202304061732/node_modules/typescript/lib/tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-17 02:01:12.681
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-17 02:17:05.466
+!MESSAGE [Info]	ESLint server running in node v18.15.0
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-04-17 02:17:05.521
+!MESSAGE [Warning]	Using Typescript version (user-setting) 5.0.3 from path "/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.4.202304061732/node_modules/typescript/lib/tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-04-17 02:17:05.522
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.3, source=user-setting}

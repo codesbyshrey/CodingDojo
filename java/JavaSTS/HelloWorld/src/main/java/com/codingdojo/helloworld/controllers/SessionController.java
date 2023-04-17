@@ -1,0 +1,35 @@
+package com.codingdojo.helloworld.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpSession;
+@Controller
+public class SessionController {
+	@RequestMapping("/count")
+	public String index(HttpSession session) {
+		//session.setAttribute("count", 0);
+		if (session.getAttribute("count") == null) {
+			session.setAttribute("count", 0);
+		}
+		else {
+			// increment by 1 using get and set attribute
+		}
+		return "session.jsp";
+		// will automatically create session for you
+		// test if key is in session with getAttribute
+	}
+	
+	@RequestMapping("/session")
+	public String sesh(HttpSession session) {
+		session.setAttribute("name", "Sara");
+		return "sesh.jsp";
+	}
+	@RequestMapping("/welcome")
+	public String welcome(HttpSession session) {
+		String userName = (String) session.getAttribute("name");
+		System.out.println(userName);
+		return "welcome.jsp";
+	}
+
+}
