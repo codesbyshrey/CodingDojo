@@ -1,13 +1,13 @@
-package com.codingdojo.sessionformdemo;
+package com.codingdojo.safetravels;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SessionFormDemoApplication {
+public class SafeTravelsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SessionFormDemoApplication.class, args);
+		SpringApplication.run(SafeTravelsApplication.class, args);
 	}
 
 }

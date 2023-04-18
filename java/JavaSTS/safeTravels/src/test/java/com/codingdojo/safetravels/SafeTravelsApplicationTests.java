@@ -1,10 +1,10 @@
-package com.codingdojo.sessionformdemo;
+package com.codingdojo.safetravels;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SessionFormDemoApplicationTests {
+class SafeTravelsApplicationTests {
 
 	@Test
 	void contextLoads() {
