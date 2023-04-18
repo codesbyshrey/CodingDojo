@@ -1,0 +1,53 @@
+package com.codingdojo.bookclub.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.codingdojo.bookclub.models.Book;
+import com.codingdojo.bookclub.repositories.BookRepository;
+
+@Service //annotation
+public class BookService {
+	//AUTOWIRED
+	@Autowired
+	private BookRepository bookRepo;
+	
+	// WE NEED TO REFER TO REPO HERE SINCE IT HAS QUERY FUNCTIONS BUILT IN
+	
+	// CREATE NEW BOOK
+	public Book createBook(Book book) {
+		return bookRepo.save(book);
+	}
+	
+	//FIND BOOK
+	public Book findBook(Long id) {
+		Optional<Book> result = bookRepo.findById(id);
+		if(result.isPresent()) {
+			return result.get();
+		} else {
+			return null;
+		}
+	}
+	
+	// GET ALL BOOKS
+	public List<Book> allBooks() {
+		return bookRepo.findAll();
+	}
+	
+	// UPDATE BOOKS
+	public Book updateBook(Long id, Book book) {
+		Optional<Book> result = bookRepo.findById(id);
+		if (result.isPresent()) {
+			Book data = result.get();
+			data.setTitle(book.getTitle());
+			data.setAuthor(book.getAuthor());
+			data.setThoughts(book.getThoughts());
+			return bookRepo.save(data);
+		} else {
+			return null;
+		}
+	}
+}
