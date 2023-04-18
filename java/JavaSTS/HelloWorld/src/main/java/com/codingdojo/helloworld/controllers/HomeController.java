@@ -1,4 +1,4 @@
-package com.codingdojo.helloworld;
+package com.codingdojo.helloworld.controllers;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.codingdojo.helloworld;
+package com.codingdojo.helloworld.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
