@@ -2611,3 +2611,219 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2023-04-17 19:18:05,608 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-17 19:18:05,614 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-04-17 19:18:05,615 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/safeTravels/src/test/resources
+2023-04-17 20:01:03,149 [Worker-123: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.dojosninjas:DojosNinjas:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/pom.xml.
+2023-04-17 20:01:03,242 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DojosNinjas/src/main/java
+2023-04-17 20:01:03,242 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DojosNinjas/src/main/resources
+2023-04-17 20:01:03,242 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DojosNinjas/src/main/resources
+2023-04-17 20:01:03,243 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DojosNinjas/src/test/java
+2023-04-17 20:01:03,352 [Worker-123: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2023-04-17 20:01:03,353 [Worker-123: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-17 20:01:03,382 [Worker-123: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.dojosninjas:DojosNinjas:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/pom.xml.
+2023-04-17 20:01:03,443 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DojosNinjas/src/main/java
+2023-04-17 20:01:03,443 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DojosNinjas/src/main/resources
+2023-04-17 20:01:03,443 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DojosNinjas/src/main/resources
+2023-04-17 20:01:03,443 [Worker-123: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DojosNinjas/src/test/java
+2023-04-17 20:01:03,523 [Worker-123: Import Getting Started Content] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for DojosNinjas
+2023-04-17 20:01:03,548 [Worker-123: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-17 20:01:03,781 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:01:03,786 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:03,787 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:01:03,787 [Worker-124: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of DojosNinjas
+2023-04-17 20:01:03,787 [Worker-124: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for DojosNinjas
+2023-04-17 20:01:04,811 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:04,811 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:04,813 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:01:47,836 [Worker-126: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.loginreg:LoginRegistration:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/pom.xml.
+2023-04-17 20:01:47,895 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LoginRegistration/src/main/java
+2023-04-17 20:01:47,895 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LoginRegistration/src/main/resources
+2023-04-17 20:01:47,896 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LoginRegistration/src/main/resources
+2023-04-17 20:01:47,897 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LoginRegistration/src/test/java
+2023-04-17 20:01:48,047 [Worker-126: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2023-04-17 20:01:48,048 [Worker-126: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-17 20:01:48,079 [Worker-126: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.loginreg:LoginRegistration:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/pom.xml.
+2023-04-17 20:01:48,141 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LoginRegistration/src/main/java
+2023-04-17 20:01:48,141 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LoginRegistration/src/main/resources
+2023-04-17 20:01:48,141 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LoginRegistration/src/main/resources
+2023-04-17 20:01:48,141 [Worker-126: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LoginRegistration/src/test/java
+2023-04-17 20:01:48,213 [Worker-126: Import Getting Started Content] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for LoginRegistration
+2023-04-17 20:01:48,218 [Worker-126: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-17 20:01:48,454 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:01:48,458 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:48,459 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/src/test/resources
+2023-04-17 20:01:48,459 [Worker-128: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of LoginRegistration
+2023-04-17 20:01:48,459 [Worker-128: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for LoginRegistration
+2023-04-17 20:01:49,482 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:49,482 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:01:49,484 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/src/test/resources
+2023-04-17 20:02:34,606 [Worker-124: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.bookclub:BookClub:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BookClub/pom.xml.
+2023-04-17 20:02:34,663 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BookClub/src/main/java
+2023-04-17 20:02:34,663 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BookClub/src/main/resources
+2023-04-17 20:02:34,664 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BookClub/src/main/resources
+2023-04-17 20:02:34,664 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BookClub/src/test/java
+2023-04-17 20:02:34,752 [Worker-124: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2023-04-17 20:02:34,752 [Worker-124: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-17 20:02:34,781 [Worker-124: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.bookclub:BookClub:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BookClub/pom.xml.
+2023-04-17 20:02:34,851 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BookClub/src/main/java
+2023-04-17 20:02:34,851 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BookClub/src/main/resources
+2023-04-17 20:02:34,851 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BookClub/src/main/resources
+2023-04-17 20:02:34,851 [Worker-124: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BookClub/src/test/java
+2023-04-17 20:02:34,936 [Worker-124: Import Getting Started Content] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for BookClub
+2023-04-17 20:02:34,940 [Worker-124: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-17 20:02:35,168 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:02:35,172 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:02:35,173 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BookClub/src/test/resources
+2023-04-17 20:02:35,173 [Worker-128: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of BookClub
+2023-04-17 20:02:35,173 [Worker-128: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for BookClub
+2023-04-17 20:02:36,192 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:02:36,192 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:02:36,193 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BookClub/src/test/resources
+2023-04-17 20:04:24,064 [Worker-127: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.dojosninjas:DojosNinjas:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/pom.xml.
+2023-04-17 20:04:24,177 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:04:24,177 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:04:24,178 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:04:24,178 [Worker-127: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of DojosNinjas
+2023-04-17 20:04:24,178 [Worker-127: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for DojosNinjas
+2023-04-17 20:04:25,305 [Worker-125: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2023-04-17 20:04:25,355 [Worker-125: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2023-04-17 20:04:25,356 [Worker-125: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mindrot:jbcrypt:0.4
+2023-04-17 20:04:46,648 [Worker-126: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.dojosninjas:DojosNinjas:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/pom.xml.
+2023-04-17 20:04:46,745 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:04:46,745 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:04:46,746 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:04:46,746 [Worker-126: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of DojosNinjas
+2023-04-17 20:04:46,746 [Worker-126: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for DojosNinjas
+2023-04-17 20:06:22,026 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:06:22,033 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:06:22,034 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:07:16,069 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:07:16,071 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:07:16,072 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:07:36,167 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:07:36,169 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:07:36,170 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:07:44,625 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:07:44,627 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:07:44,628 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:08:54,476 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:08:54,476 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:08:54,477 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:09:07,751 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:07,751 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:07,752 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:09:27,323 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:27,323 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:27,324 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:09:47,027 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:47,027 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:47,028 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:09:58,999 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:58,999 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:09:59,000 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:10:56,793 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:10:56,793 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:10:56,794 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:11:00,557 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:00,557 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:00,558 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:11:10,774 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:10,774 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:10,775 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:11:18,325 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:18,325 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:18,326 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:11:30,386 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:30,386 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:30,387 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:11:40,248 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:40,248 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:11:40,249 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:13:26,068 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:13:26,068 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:13:26,069 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:15:35,978 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:15:35,978 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:15:35,978 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:15:38,411 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:15:38,411 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:15:38,412 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:16:58,823 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:16:58,823 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:16:58,823 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:20:00,968 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:20:00,968 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:20:00,969 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:33:21,128 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:33:21,129 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:33:21,130 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:33:52,192 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:33:52,193 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:33:52,193 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:34:02,568 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:34:02,569 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:34:02,570 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:37:38,683 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:37:38,684 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:37:38,685 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:38:49,059 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:38:49,059 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:38:49,060 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:54:52,514 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:54:52,515 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:54:52,516 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:57:14,398 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:57:14,399 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:57:14,399 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:57:40,086 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:57:40,086 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:57:40,087 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:57:56,867 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:57:56,868 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:57:56,869 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:57:59,992 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:57:59,993 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:57:59,993 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:58:36,623 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:58:36,624 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:58:36,624 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:59:14,689 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:59:14,689 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:59:14,690 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:59:20,543 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:59:20,544 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:59:20,545 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 20:59:39,599 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:59:39,599 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:59:39,600 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:01:26,386 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:01:26,387 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:01:26,388 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:01:30,748 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:01:30,749 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:01:30,749 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:03:16,927 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:03:16,927 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:03:16,928 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:03:32,088 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:03:32,089 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:03:32,090 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:06:02,769 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:06:02,769 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:06:02,770 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:06:09,148 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:06:09,149 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:06:09,149 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:06:31,776 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:06:31,785 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:06:31,786 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:06:41,351 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:06:41,351 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:06:41,352 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/DojosNinjas/src/test/resources
+2023-04-17 21:21:39,750 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 21:21:39,753 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:21:39,753 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/src/test/resources
+2023-04-17 21:22:06,389 [Worker-146: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.loginreg:LoginRegistration:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/pom.xml.
+2023-04-17 21:22:06,492 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:22:06,492 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/src/test/resources
+2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of LoginRegistration
+2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for LoginRegistration
