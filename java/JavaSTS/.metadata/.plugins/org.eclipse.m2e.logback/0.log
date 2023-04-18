@@ -2827,3 +2827,80 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/LoginRegistration/src/test/resources
 2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of LoginRegistration
 2023-04-17 21:22:06,493 [Worker-146: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for LoginRegistration
+2023-04-18 08:54:05,290 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-18 08:54:49,818 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.beltreview:BeltReview:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/pom.xml.
+2023-04-18 08:54:50,087 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeltReview/src/main/java
+2023-04-18 08:54:50,087 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeltReview/src/main/resources
+2023-04-18 08:54:50,088 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeltReview/src/main/resources
+2023-04-18 08:54:50,089 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeltReview/src/test/java
+2023-04-18 08:54:50,524 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2023-04-18 08:54:50,526 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-18 08:54:50,571 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.beltreview:BeltReview:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/pom.xml.
+2023-04-18 08:54:50,698 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeltReview/src/main/java
+2023-04-18 08:54:50,698 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeltReview/src/main/resources
+2023-04-18 08:54:50,698 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeltReview/src/main/resources
+2023-04-18 08:54:50,699 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeltReview/src/test/java
+2023-04-18 08:54:50,921 [Worker-7: Import Getting Started Content] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for BeltReview
+2023-04-18 08:54:50,926 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-18 08:54:51,232 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 08:54:51,237 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:54:51,239 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:54:51,239 [Worker-11: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of BeltReview
+2023-04-18 08:54:51,239 [Worker-11: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for BeltReview
+2023-04-18 08:54:52,368 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:54:52,368 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:54:52,370 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:55:58,707 [Worker-9: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.beltreview:BeltReview:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/pom.xml.
+2023-04-18 08:55:58,858 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:55:58,858 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:55:58,859 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:55:58,859 [Worker-9: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of BeltReview
+2023-04-18 08:55:58,859 [Worker-9: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for BeltReview
+2023-04-18 08:57:26,477 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 08:57:26,485 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:57:26,487 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:57:28,787 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 08:57:28,788 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:57:28,789 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:57:54,176 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 08:57:54,179 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:57:54,181 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:58:23,371 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:23,371 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:23,372 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:58:48,325 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:48,326 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:48,327 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:58:56,556 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:56,557 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:58:56,558 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:59:34,777 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:59:34,777 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:59:34,778 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:59:42,354 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:59:42,354 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:59:42,355 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 08:59:54,551 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 08:59:54,552 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 08:59:54,553 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:06:29,817 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.codingdojo.beltreview:BeltReview:0.0.1-SNAPSHOT @ /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/pom.xml.
+2023-04-18 09:06:29,948 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:06:29,948 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:06:29,949 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:06:29,949 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of BeltReview
+2023-04-18 09:06:29,949 [Worker-17: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for BeltReview
+2023-04-18 09:08:04,654 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 09:08:04,658 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:08:04,660 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:10:49,437 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 09:10:49,438 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:10:49,439 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:11:17,107 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 09:11:17,108 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:11:17,110 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:12:08,566 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 09:12:08,567 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:12:08,568 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
+2023-04-18 09:12:19,705 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-18 09:12:19,706 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-18 09:12:19,707 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BeltReview/src/test/resources
