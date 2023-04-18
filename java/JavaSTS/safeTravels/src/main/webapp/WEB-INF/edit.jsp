@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="navbar">
 			<h1>Edit Expense: </h1>
-			<a href="/expense">Go back</a>
+			<a href="/expense">Go Back</a>
 		</div>
 		<form:form class="form" action="/expenses/${expense.id}" method="put" modelAttribute="expense">
 			<div class="form-group mb-3" >
