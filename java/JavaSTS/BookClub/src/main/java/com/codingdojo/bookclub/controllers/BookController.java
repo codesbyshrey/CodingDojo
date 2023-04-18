@@ -27,6 +27,9 @@ public class BookController {
 	// ALL ROUTING OCCURS BELOW
 	@GetMapping("") //Dashboard.jsp
 	public String index(Model model, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
 		// User loggedInUser = userService.findUserByID((Long)session.getAttribute("userID"));
 		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
 		model.addAttribute("allBooks", bookService.allBooks());
