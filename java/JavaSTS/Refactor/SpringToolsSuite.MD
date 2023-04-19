@@ -1,0 +1,1 @@
+# STS 4 Application Setup Steps / Cheatsheet
