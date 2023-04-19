@@ -3103,3 +3103,4 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2023-04-18 13:22:26,762 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-18 13:22:26,767 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-04-18 13:22:26,768 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/BookClub/src/test/resources
+2023-04-18 21:22:10,312 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
