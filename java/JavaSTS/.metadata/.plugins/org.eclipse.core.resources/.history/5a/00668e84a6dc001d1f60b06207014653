@@ -1,0 +1,26 @@
+package com.codingdojo.helloworld;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/hello")
+public class HomeController {
+	// Annotation (similar to SpringBootApp and RC above)
+		@RequestMapping("/")
+		public String index() {
+			// need to attach a method to it
+			// could at HTML methods even here
+			return "Hello World!";
+		}
+		
+		@RequestMapping("/new_route")
+		public String idx() {
+			return "Shreybook is coding...";
+		}
+		
+		@RequestMapping("/world")
+			public String world() {
+				return "Class annotations are cool too!";
+			}
+}

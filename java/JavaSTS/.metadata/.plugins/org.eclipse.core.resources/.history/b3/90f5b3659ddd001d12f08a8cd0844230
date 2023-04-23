@@ -1,0 +1,6 @@
+package com.codingdojo.dojosninjas.repositories;
+
+@Repository
+public interface NinjaRepository extends CrudRepository<Ninja, Long>{
+	List<Ninja> findAll();
+}

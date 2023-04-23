@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conditional JSTL Tags</title>
+</head>
+<body>
+	<h1> Guess the number (secretNumber)</h1>
+	<hr>
+	
+	<c:if test = "${number<secretNumber}">
+		<p><c:out value="Your number is too low."/></p>
+	</c:if>
+	<c:if test = "${number>secretNumber}">
+		<p><c:out value="Your number is too high."/></p>
+	</c:if>
+	<c:if test = "${number==secretNumber}">
+		<p style="color:green;"><c:out value="You got it!"/></p>
+	</c:if>
+
+	<c:if test = "${number!=secretNumber}">
+		<p><c:out value="Try again."/></p>
+	</c:if>
+
+</body>
+</html>

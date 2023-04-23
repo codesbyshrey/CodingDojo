@@ -1,0 +1,57 @@
+package com.codingdojo.bookclub.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.codingdojo.bookclub.models.Book;
+import com.codingdojo.bookclub.services.BookService;
+import com.codingdojo.bookclub.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+
+@Controller
+@RequestMapping("/books") // PREPENDS ALL ADDRESSES BELOW WITH /BOOKS
+public class BookController {
+	// AUTOWIRED
+	@Autowired private BookService bookService;
+	@Autowired private UserService userService;
+	
+	// ALL ROUTING OCCURS BELOW
+	@GetMapping("") //Dashboard.jsp
+	public String index(Model model, HttpSession session) {
+		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
+		model.addAttribute("allBooks", bookService.allBooks());
+		return "dashboard.jsp";
+	}
+	
+	@GetMapping("/{bookID}") //showBook.jsp
+	public String showBook(@PathVariable("bookID") Long bookID, Model model) {
+		model.addAttribute("book", bookService.findBook(bookID));
+		return "showBook.jsp";
+	}
+	
+	@GetMapping("/new") //newBook.jsp
+	public String newBook(@ModelAttribute("newBook") Book newBook, Model model, HttpSession session) {
+		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
+		return "newBook.jsp";
+	}
+	
+	// OTHER ROUTING
+	@PostMapping("/new") //same route but redirect to "/books" explicitly
+	public String postNewBook(@Valid @ModelAttribute("newBook") Book newBook, BindingResult result) {
+		if(result.hasErrors()) {
+			return "newBook.jsp"; 
+			// make sure to add error labels to that .jsp
+		}
+		bookService.createBook(newBook);
+		return "redirect:/books" + newBook.getId();
+	}
+}

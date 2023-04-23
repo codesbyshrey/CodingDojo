@@ -1,0 +1,140 @@
+package com.codingdojo.joybundler.models;
+
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table(name="joys")
+public class Joy {
+
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		private Long id;
+		
+		// DATE AND TIME
+		@Column(updatable=false)
+	    @DateTimeFormat(pattern="yyyy-MM-dd")
+	    private Date createdAt;
+	    @DateTimeFormat(pattern="yyyy-MM-dd")
+	    private Date updatedAt;
+	    
+	    // COME BACK TO ME HERE FOR THE BLACK BELT FEATURES ONCE RED BELT IS COMPLETE
+	    // BLACK BELT WILL REQUIRE MANY TO MANY WITH JOIN TABLE AND VOTING
+	    // NAME WILL BE VOTES, JOIN VOLUMN ON nameid, INVERSE JOIN ON userid
+	    
+	    // OTHER ATTRIBUTES
+	    @NotNull
+	    @Size(min=2, message="Name must be at least 2 characters!")
+	    private String babyName;
+	    
+	    @NotNull
+	    private String gender;
+	    
+	    @NotNull
+	    @Size(min=1, message="Origin of name cannot be left blank!")
+	    private String origin;
+	    
+	    @NotNull
+	    @Size(min=1, message="Meaning is required")
+	    private String meaning;
+	    
+	    @ManyToOne(fetch=FetchType.LAZY)
+	    @JoinColumn(name="userId")
+	    private User user;
+	    
+	    //CONSTRUCTORS
+	    public Joy() {
+	    	// EMPTY CONSTRUCTOR FOR JAVA BEAN
+	    }
+	    
+	    public Joy(Long id, String babyName, String gender, String origin, String meaning, User user) {
+	    	this.id = id;
+	    	this.babyName = babyName;
+	    	this.gender = gender;
+	    	this.origin = origin;
+	    	this.meaning = meaning;
+	    	this.user = user;
+	    }
+	    
+	    // PERSIST AND UPDATE FOR CREATED AND UPDATED
+		@PrePersist
+	    protected void onCreate(){
+	        this.createdAt = new Date();
+	    }
+	    @PreUpdate
+	    protected void onUpdate(){
+	        this.updatedAt = new Date();
+	    }
+
+		public Long getId() {
+			return id;
+		}
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+
+		public String getBabyName() {
+			return babyName;
+		}
+
+		public void setBabyName(String babyName) {
+			this.babyName = babyName;
+		}
+
+		public String getGender() {
+			return gender;
+		}
+
+		public void setGender(String gender) {
+			this.gender = gender;
+		}
+
+		public String getOrigin() {
+			return origin;
+		}
+
+		public void setOrigin(String origin) {
+			this.origin = origin;
+		}
+
+		public String getMeaning() {
+			return meaning;
+		}
+
+		public void setMeaning(String meaning) {
+			this.meaning = meaning;
+		}
+
+		public User getUser() {
+			return user;
+		}
+
+		public void setUser(User user) {
+			this.user = user;
+		}
+
+		public Date getCreatedAt() {
+			return createdAt;
+		}
+
+		public Date getUpdatedAt() {
+			return updatedAt;
+		}
+	    
+	    // IMPORT GETTERS AND SETTERS (no set for CA DA)
+	    
+}

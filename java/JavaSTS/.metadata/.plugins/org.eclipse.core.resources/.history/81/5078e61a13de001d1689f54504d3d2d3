@@ -1,0 +1,8 @@
+package com.codingdojo.bookclub.repositories;
+
+@Repository //technically not needed
+public interface UserRepository extends CrudRepository<User, Long>{
+	Optional<User> findByEmail(String email);
+	// Optional - 
+	// Finds Book club user via Email to create repository
+}

@@ -1,0 +1,10 @@
+package com.codingdojo.joybundler.repositories;
+
+@Repository
+public interface JoyRepository extends CrudRepository<Joy, Long>{
+	
+	List<Name> findAll();
+	
+	// using specific terminology will let you access specific queries
+	// SQL specific language / model specific language
+}

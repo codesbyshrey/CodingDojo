@@ -1,0 +1,56 @@
+package com.codingdojo.joybundler.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.codingdojo.joybundler.models.Joy;
+import com.codingdojo.joybundler.repositories.JoyRepository;
+
+@Service
+public class JoyService {
+	//AUTOWIRED
+	@Autowired
+	private JoyRepository joyRepo;
+	// WE NEED TO REFER TO REPO HERE SINCE IT HAS QUERY FUNCTIONS BUILT IN
+	
+	// CREATE
+	public Joy createJoy(Joy joy) {
+		return joyRepo.save(joy);
+	}
+	
+	// READ ALL
+	public List<Joy> allJoys() {
+		return joyRepo.findAll();
+	}
+	
+	// FIND ONE
+	public Joy findJoy(Long id) {
+		Optional<Joy> result = joyRepo.findById(id);
+		if (result.isPresent()) {
+			return result.get();
+		} else {
+			return null;
+		}
+	}
+	
+	// UPDATE JOY
+	public Joy updateJoy(Long id, Joy joy) {
+		Optional<Joy> result = joyRepo.findById(id);
+		if (result.isPresent()) {
+			Joy data = result.get();
+			data.setBabyName(joy.getBabyName());
+			//etc etc
+			return joyRepo.save(data);
+		} else {
+			return null;
+		}
+	}
+	
+	// DELETE JOY lol
+	public void deleteJoy(Long id) {
+		joyRepo.deleteById(id);;
+	}
+}

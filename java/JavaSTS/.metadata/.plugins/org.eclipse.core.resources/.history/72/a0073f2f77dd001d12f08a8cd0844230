@@ -1,0 +1,5 @@
+package com.codingdojo.jpa.repositories;
+
+public interface BookRepository {
+
+}

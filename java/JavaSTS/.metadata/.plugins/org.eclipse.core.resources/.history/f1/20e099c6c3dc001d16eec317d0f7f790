@@ -1,0 +1,10 @@
+package com.codingdojo.helloworld.controllers;
+
+@Controller
+@RequestMapping("/jsp")
+public class JSPController {
+	@RequestMapping("")
+	public String jspIndex() {
+		return "index2.jsp";
+	}
+}

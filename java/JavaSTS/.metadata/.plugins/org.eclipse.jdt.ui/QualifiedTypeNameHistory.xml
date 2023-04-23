@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.codingdojo.fruityloops.models.Item"/>
+    <fullyQualifiedTypeName name="com.codingdojo.jpa.models.Book"/>
+    <fullyQualifiedTypeName name="com.codingdojo.safetravels.repositories.ExpenseRepository"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
+    <fullyQualifiedTypeName name="com.codingdojo.dojosninjas.repositories.DojoRepository"/>
+    <fullyQualifiedTypeName name="com.codingdojo.dojosninjas.repositories.NinjaRepository"/>
+    <fullyQualifiedTypeName name="com.codingdojo.bookclub.repositories.BookRepository"/>
+    <fullyQualifiedTypeName name="com.codingdojo.bookclub.models.Book"/>
+    <fullyQualifiedTypeName name="com.codingdojo.bookclub.models.User"/>
+    <fullyQualifiedTypeName name="com.codingdojo.joybundler.repositories.JoyRepository"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Transient"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotEmpty"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="com.codingdojo.joybundler.models.User"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,14 @@
+package com.codingdojo.helloworld;
+
+import org.springframework.ui.Model;
+
+@Controller
+public class DemoController {
+	@RequestMapping("/{number}")
+	public String index(@PathVariable("number") Integer number, Model model) {
+		model.addAttribute("number", number);
+		model.addAttribute("secretNumber", 4);
+		return "conditional.jsp";
+	}
+
+}

@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <!-- need c library, tag library, and error page -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> BUNDLE NEW JOY </title>
+<!-- THIS PAGE ROUTES TO LOCALHOST:8080/NAMES/NEW -->
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<h1>Add a Joy to Your Bundles!</h1>
+			<a href="/home">Back to the Dashboard!</a>
+		</div>
+		<form:form class="form" action="/names/new" method="POST" modelAttribute="newJoy">
+			<div class="form-group mb-3">
+				<form:label class="form-label" path="babyName">Baby Name</form:label>
+				<form:errors class="text-danger" path="babyName"/>
+				<form:input type="text" class="form-control" path="babyName"/>
+			</div>
+			<div class="form-group mb-3">
+				<form:label class="form-label" path="origin">Origin</form:label>
+				<form:errors class="text-danger" path="origin"/>
+				<form:input type="text" class="form-control" path="origin"/>
+			</div>
+			<div class="form-group mb-3">
+				<form:label class="form-label" path="meaning">Meaning</form:label>
+				<form:errors class="text-danger" path="meaning"/>
+				<form:textarea class="form-control" rows="4" cols="50" path="meaning"/>
+			</div>
+			<form:input path="user" type="hidden" value="${user.id}"/>
+			<input class="btn btn-primary" type="submit" value="Submit"/>
+			<a href="/home" class="btn btn-warning"> CANCEL </a>
+		</form:form>
+	</div>
+</body>
+</html>

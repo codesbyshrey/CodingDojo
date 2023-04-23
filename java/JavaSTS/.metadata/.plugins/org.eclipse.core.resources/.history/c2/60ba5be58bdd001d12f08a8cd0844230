@@ -1,0 +1,5 @@
+package com.codingdojo.safetravels.controllers;
+
+public class ExpenseController {
+
+}

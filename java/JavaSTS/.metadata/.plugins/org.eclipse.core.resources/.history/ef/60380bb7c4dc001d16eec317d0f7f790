@@ -1,0 +1,15 @@
+package com.codingdojo.helloworld.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model; //new import needed
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/jsp")
+public class JSPController {
+	@RequestMapping("")
+	public String jspIndex(Model model) {
+		model.addAttribute("dojoName", "Burbank");
+		return "index2.jsp";
+	}
+}

@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- for Bootstrap CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- YOUR own local CSS -->
+<link rel="stylesheet" href="/css/style.css"/>
+<!-- LOCATED IN SRC/MAIN/RESOURCES/STATIC-->
+<title>OMIKUJI</title>
+</head>
+<body>
+	<div>
+		<h1> Send an Omikuji!</h1>
+		<form action="/submit" method="POST">
+			<div>
+				<label> </label>
+				<input >
+			</div>
+			<div>
+				<label> </label>
+				<input >
+			</div>
+			<div>
+				<label> </label>
+				<input >
+			</div>
+			<div>
+				<label> </label>
+				<input >
+			</div>
+			<div>
+				<label> </label>
+				<input >
+			</div>
+			<div>
+				<label> </label>
+				<textarea></textarea>
+			</div>
+			<div>
+				<label> </label>
+				<input >
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

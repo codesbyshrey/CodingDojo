@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!-- not needed atm -->
+<!-- form:form -->
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!-- for rendering errors on PUT routes -->
+<%@ page isErrorPage="true" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- FOR BOOTSTRAP CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<title> DASHBOARD </title>
+<!-- THIS ROUTES TO LOCALHOST:8080/HOME -->
+</head>
+<body>
+		<div class="container">
+		<div class="navbar d-flex justify-content between">
+			<div>
+				<h1>Welcome, <c:out value="${user.name}"/></h1>
+				<p> Here are some name suggestions </p>
+			</div>
+			<div>
+				<a href="/logout">LOGOUT</a>
+			</div>
+		</div>
+		<div class="">
+			<table class="table table-striped border border-3 border-dark">
+				<thead>
+					<tr>
+						<th class="border border-3 border-dark border-bottom-0">Name</th>
+						<th class="border border-3 border-dark border-bottom-0">Gender</th>
+						<th class="border border-3 border-dark border-bottom-0">Origin</th>
+						<th class="border border-3 border-dark border-bottom-0">Submitted By</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="joy" items="${allJoys}">
+						<tr>
+							<td class="border border-3 border-dark border-top-0 border-bottom-0"><a href="/names/${joy.id}"><c:out value="${joy.babyName}"/></a></td>
+							<td class="border border-3 border-dark border-top-0 border-bottom-0"><c:out value="${joy.gender}"/></td>
+							<td class="border border-3 border-dark border-top-0 border-bottom-0"><c:out value="${joy.origin}"/></td>
+							<td class="border border-3 border-dark border-top-0 border-bottom-0"><c:out value="${joy.user.name}"/></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<a href="/names/new">+ Bundle New Joy! (new name)</a>
+		</div>
+	</div>
+</body>
+</html>

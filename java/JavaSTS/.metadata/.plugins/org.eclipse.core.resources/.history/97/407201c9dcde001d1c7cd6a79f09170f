@@ -1,0 +1,33 @@
+package com.codingdojo.joybundler.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.codingdojo.joybundler.services.JoyService;
+import com.codingdojo.joybundler.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+// annoyingly the dashboard is /home, otherwise could prepend all w/ names and RequestMapping up here
+public class JoyController {
+	
+	// AUTOWIRED
+	@Autowired private UserService userService;
+	@Autowired private JoyService joyService;
+	
+	// ALL ROUTING OCCURS BELOW
+	// DASHBOARD (index.jsp)
+	@GetMapping("/home")
+	public String index(Model model, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		// User loggedInUser = userService.findUserByID((Long)session.getAttribute("userID"));
+		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
+		model.addAttribute("allJoys", joyService.allJoys());
+		return "idnex.jsp";
+	}
+}
