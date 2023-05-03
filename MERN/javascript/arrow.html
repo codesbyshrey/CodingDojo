@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+1. Update all methods to become Arrow functions
+2. COnnect the EventListener `setBackgroundColorByID` to the paragraph in the HTML
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Arrow Functions </title>
+</head>
+
+<body id="body">
+    <h1> My Boring Website </h1>
+    <p id="paragraph">
+        This website is boring, with very little CSS.
+        However, we really just care about the javascript.
+        For example, if you click <button id="button">this button</button>, the background of this paragraph tag
+        will change to blue.
+    </p>
+    <p>We also have a <button id="alert">alert</button> button that will grab the text from the input below and show it
+        in a popup.</p>
+    <div>
+        <input type="text" id="popup-input" placeholder="text for alert">
+    </div>
+    <p>
+        We just like random interactivity in the site, including a fun effect if you hover over <span
+            id="hover-this"><b>this.</b></span>
+    </p>
+    <!-- CHANGE ONMOUSEOVER TO ONCLICK-->
+    <p id="color-change" onclick="mouseClickFunction(this)">
+        Another task: This should be another feature.
+        I want to click anywhere in this paragraph tag and I want to be able to change the background color to
+        whatever is in this input: <input type="text" id="background-color" placeholder="background-color input"/>
+    </p>
+    <script>
+        // this will pull the button, make it click and change p background color to blue
+        document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "blue");
+        
+        // this will pull the alert button, and launch an alert based on the text
+        document.getElementById("alert").onclick = () => alert(document.getElementById("popup-input").value);
+        
+        // the following two functions will only change once the mouse is hovering over the text with the id hover-this
+        document.getElementById("hover-this").onmouseover = () => setBackgroundColorById("body", "red");
+        document.getElementById("hover-this").onmouseout = () => setBackgroundColorById("body", "white");
+        
+        // this gets the value from ids across the document enabling us
+        // function getValueFromId(id) {
+        //     // console.log(document.getElementById(id).value);
+        //     return document.getElementById(id).value;
+        // }
+
+        getValueFromId = (id) => document.getElementById(id).value;
+        
+        // this is the function we have to attach an event listener to, directly to the paragraph, and allow it to change based on the input we provide --> we need to change el in the mouseOverFunction to recognize the text we specificaly want 
+        // id of the input is background-color
+        // id of the p tag the text is in is color-change
+
+        setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color;
+        mouseClickFunction = (el) => setBackgroundColorById("color-change", getValueFromId("background-color"));
+
+        // function mouseOverFunction(el) {
+        //     el.style = "background-color: cyan";
+        // }
+    </script>
+</body>
+
+</html>
