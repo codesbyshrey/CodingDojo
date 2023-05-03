@@ -1,6 +1,8 @@
 .zip
 .DS_Store
-.DS_Store?
+.DS_Store?l
+.env
+dotenv
 
 node_modules
 node_modules/
