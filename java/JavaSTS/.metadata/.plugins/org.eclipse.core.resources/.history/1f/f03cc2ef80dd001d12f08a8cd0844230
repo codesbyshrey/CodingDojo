@@ -1,0 +1,10 @@
+package com.codingdojo.jpa.controllers;
+
+import org.springframework.stereotype.Controller;
+
+// won't need an API controller from now on
+// only need one controller for now
+@Controller
+public class BookController {
+
+}

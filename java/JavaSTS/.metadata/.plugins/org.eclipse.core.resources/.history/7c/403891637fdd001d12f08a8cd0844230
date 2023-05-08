@@ -1,0 +1,5 @@
+package com.codingdojo.jpa.controllers;
+
+public class BookController {
+
+}

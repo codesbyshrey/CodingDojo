@@ -1,0 +1,2 @@
+# Necessary to pass data from controller to .jsp file
+spring.mvc.view.prefix=/WEB-INF/

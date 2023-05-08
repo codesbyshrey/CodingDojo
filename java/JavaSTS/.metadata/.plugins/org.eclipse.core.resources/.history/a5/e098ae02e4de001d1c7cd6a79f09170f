@@ -1,0 +1,19 @@
+package com.codingdojo.joybundler.repositories;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.codingdojo.joybundler.models.User;
+
+@Repository
+public interface UserRepository extends CrudRepository<User, Long>{
+	// Crud takes in User model and is seeking Long to IDentify
+	
+	Optional<User> findByEmail(String email);
+	
+	// Adding findByName in case it could help with Black Belt 
+	// Be used to check if a name was unique without having to check via email's data
+	Optional<User> findByName(String name);
+}

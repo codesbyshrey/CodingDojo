@@ -1,0 +1,52 @@
+package com.codingdojo.joybundler.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.codingdojo.joybundler.models.Joy;
+import com.codingdojo.joybundler.models.User;
+import com.codingdojo.joybundler.services.JoyService;
+import com.codingdojo.joybundler.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class VoteController {
+	
+	@Autowired private UserService userService;
+	@Autowired private JoyService joyService;
+
+		@GetMapping("/names/{id}/vote")
+		public String vote(HttpSession session, @PathVariable("id") Long id) {
+			// REDIRECT IF USER NOT LOGGED IN
+	        if(session.getAttribute("userId") == null){
+	            return "redirect:/";
+	        }
+
+	        //get the current user and name
+	        User user = userService.findUserByID((Long) session.getAttribute("userId"));
+	        Joy joy = joyService.findJoy(id);
+	        
+	        for(User currentUser: joy.getUsers()){
+	            System.out.println(currentUser.getName());
+	        }
+
+	        List<Joy> votedJoys = user.getVotedJoys();
+	        if(votedJoys.contains(babyName)){
+	            return "redirect:/home";
+	        }
+	        
+	        joy.getUsers().add(user);
+	        joyService.updateJoy(babyName);
+
+	        return "redirect:/home";
+		}
+}
+
+// black belt feature, don't start building till you're confident to include
+// could jump to a many to many, but think about python black belt attempt where
+// we could still include a voting check by adding it as a boolean

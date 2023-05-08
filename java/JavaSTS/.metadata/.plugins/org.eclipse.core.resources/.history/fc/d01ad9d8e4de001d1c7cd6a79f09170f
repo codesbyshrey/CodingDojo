@@ -1,0 +1,66 @@
+package com.codingdojo.joybundler.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.codingdojo.joybundler.models.LoginUser;
+import com.codingdojo.joybundler.models.User;
+import com.codingdojo.joybundler.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+
+@Controller
+public class UserController {
+	// AUTOWIRED
+	@Autowired
+	private UserService userService;
+	
+	// ALL ROUTING OCCURS BELOW
+	@GetMapping("")
+	public String local() {
+		return "redirect:/";
+	}
+	
+	@GetMapping("/") //index.jsp
+	public String index(@ModelAttribute("newUser") User newUser, @ModelAttribute("loginUser") LoginUser loginUser) {
+		return "login.jsp";
+	}
+	
+	@GetMapping("/logout") //get but redirect to /
+	public String logout(HttpSession session) {
+		session.setAttribute("userID", null);
+		return "redirect:/";
+	}
+	
+	// OTHER ROUTING
+	@PostMapping("/register") //index.jsp or redirect/books
+	public String register(@Valid @ModelAttribute("newUser") User newUser, BindingResult result, Model model, HttpSession session) {
+		userService.registerUser(newUser, result);
+		if(result.hasErrors()) {
+			model.addAttribute("loginUser", new LoginUser());
+			return "login.jsp";
+		}
+		session.setAttribute("userID", newUser.getId());
+		model.addAttribute("user", newUser);
+		return "redirect:/home";
+	}
+	
+	@PostMapping("/login") //index.jsp or redirect/books
+	public String login(@Valid @ModelAttribute("loginUser") LoginUser loginUser, BindingResult result, Model model, HttpSession session) {
+		User user = userService.findUserByEmail(loginUser.getEmail());
+		userService.loginUser(loginUser, result);
+		if(result.hasErrors()) {
+			model.addAttribute("newUser", new User());
+			return "login.jsp";
+		}
+		session.setAttribute("userID", user.getId());
+		model.addAttribute("user", user);
+		return "redirect:/home";
+	}
+}

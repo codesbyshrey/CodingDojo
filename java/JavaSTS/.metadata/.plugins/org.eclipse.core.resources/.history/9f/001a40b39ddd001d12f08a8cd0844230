@@ -1,0 +1,29 @@
+package com.codingdojo.dojosninjas.services;
+
+import com.codingdojo.dojosninjas.repositories.DojoRepository;
+
+@Service
+public class DojoService {
+	private final DojoRepository dojoRepo;
+	
+	public DojoService(DojoRepository dojoRepo) {
+		this.dojoRepo = dojoRepo;
+	}
+	
+	public Dojo createDojo(Dojo dojo) {
+		return dojoRepo.save(dojo);
+	}
+	
+	public Dojo findDojo(Long id) {
+		Optional<Dojo> optionalDojo = dojoRepo.findById(id);
+		if(optionalDojo.isPresent()) {
+			return optionalDojo.get();
+		}
+		return null;
+	}
+	
+	public List<Dojo> getAllDojos() {
+		return dojoRepo.findAll();
+	}
+
+}

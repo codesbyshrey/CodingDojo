@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> DASHBOARD </title>
+<!-- THIS ROUTES TO LOCALHOST:8080/HOME -->
+</head>
+<body>
+	<h1> Hello User. Here are some name suggestions. </h1>
+	<h3> Black Belt - include voting that is tied to user and votes column showing the number of votes </h3>
+</body>
+</html>

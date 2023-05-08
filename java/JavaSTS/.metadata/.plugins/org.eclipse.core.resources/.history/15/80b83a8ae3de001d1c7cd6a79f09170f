@@ -1,0 +1,9 @@
+package com.codingdojo.joybundler.controllers;
+
+public class VoteController {
+
+}
+
+// black belt feature, don't start building till you're confident to include
+// could jump to a many to many, but think about python black belt attempt where
+// we could still include a voting check by adding it as a boolean

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <!-- only needs c tag library -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- FOR BOOTSTRAP CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<title> VIEW YOUR BUNDLE </title>
+<!-- THIS ROUTES TO LOCALHOST:8080/NAMES/BABYID -->
+</head>
+<body>
+	<div class="container">
+		<div  class="navbar d-flex justify-content between">
+			<h1><c:out value="${joy.babyName}"/></h1>
+			<a href="home">Back to the Bundles!</a>
+		</div>
+		<div>
+			<h5><c:out value="${book.user.name}"/> added <c:out value="${joy.babyName}"/></h5>
+			<h5> Meaning:</h5>
+			<div class="d-flex justify-content-center">
+				<p class="border border-2 border-dark border-start-0 border-end-0 col-10"><c:out value="${joy.meaning}"/></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

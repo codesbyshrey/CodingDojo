@@ -1,0 +1,15 @@
+# JSP Files
+spring.mvc.view.prefix=/WEB-INF/
+
+# Data Persistence (replace DB name)
+spring.datasource.url=jdbc:mysql://localhost:3306/java-review
+spring.datasource.username=root
+spring.datasource.password=rootroot
+spring.jpa.hibernate.ddl-auto=update
+
+# Password on SQL for Mac will be double, single for Windows
+
+# For Update and Delete method hidden inputs
+spring.mvc.hiddenmethod.filter.enabled=true
+
+##### MORE NOTES TO TAKE #####

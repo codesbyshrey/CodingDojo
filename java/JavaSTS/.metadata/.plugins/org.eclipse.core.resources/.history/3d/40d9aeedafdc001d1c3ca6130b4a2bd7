@@ -1,0 +1,5 @@
+package com.codingdojo.fruityloops.models;
+
+public class Item {
+
+}

@@ -1,0 +1,5 @@
+package com.codingdojo.joybundler.repositories;
+
+public interface UserRepository {
+
+}

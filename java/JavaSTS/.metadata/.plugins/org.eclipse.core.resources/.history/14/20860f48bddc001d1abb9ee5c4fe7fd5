@@ -1,0 +1,16 @@
+<!-- here we will import the DATE class  -->
+<!-- the import will have to be in the first line of the jsp tag  -->
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo JSP</title>
+    </head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>

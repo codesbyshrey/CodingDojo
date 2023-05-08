@@ -1,0 +1,7 @@
+INDEX VERSION 1.132+/Users/picsbyshrey/Desktop/codesbyshrey/CodingDojo/java/JavaSTS/.metadata/.plugins/org.eclipse.jdt.core
+3174720067.index
+1865797976.index
+3402187422.index
+986674614.index
+2212434883.index
+3223850603.index

@@ -1,0 +1,159 @@
+package com.codingdojo.joybundler.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.codingdojo.joybundler.models.Joy;
+import com.codingdojo.joybundler.models.User;
+import com.codingdojo.joybundler.services.JoyService;
+import com.codingdojo.joybundler.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+
+@Controller
+// annoyingly the dashboard is /home, otherwise could prepend all w/ names and RequestMapping up here
+public class JoyController {
+	
+	// AUTOWIRED
+	@Autowired private UserService userService;
+	@Autowired private JoyService joyService;
+	
+	// ALL ROUTING OCCURS BELOW
+	// DASHBOARD (index.jsp) ======================================================
+	@GetMapping("/home")
+	public String index(Model model, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		// User loggedInUser = userService.findUserByID((Long)session.getAttribute("userID"));
+		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
+		model.addAttribute("allJoys", joyService.allJoys());
+		return "index.jsp";
+	}
+	
+	// SHOW / READ ONE =====================================================
+	@GetMapping("/names/{joyID}") //showJoy.jsp
+	public String showJoy(@PathVariable("joyID") Long joyID, Model model, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		// ONLY JOY OWNER CAN SEE NAME TO EDIT (INSTANTIATE JOY / USER FOR LOGIC)
+		User user = userService.findUserByID((Long)session.getAttribute("userID"));
+		System.out.println("ARE WE RUNNING INTO AN ERROR BEFORE OR ATER THIS LINE");
+		Joy joy = joyService.findJoy(joyID);
+		model.addAttribute("user", user);
+		model.addAttribute("joy", joy);
+		
+		// CHECK IF USER HAS VOTED FOR THE NAME
+		boolean isVoted = joy.getUsers().contains(user);
+		model.addAttribute("isVoted", isVoted);
+		return "showJoy.jsp";
+	}
+	
+	// CREATE =================================================================
+	@GetMapping("/names/new") //createJoy.jsp
+	public String newJoy(@ModelAttribute("newJoy") Joy newJoy, Model model, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		model.addAttribute("user", userService.findUserByID((Long)session.getAttribute("userID")));
+		return "createJoy.jsp";
+	}
+	
+	// PROCESS CREATE =====================================================
+	@PostMapping("/names/createJoy")
+	public String createJoy(@Valid @ModelAttribute("newJoy") Joy newJoy, BindingResult result, HttpSession session) {
+		if(session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		
+		List<Joy> joys = joyService.allJoys();
+		for (Joy existJoy : joys) {
+			if(existJoy.getBabyName().equals(newJoy.getBabyName())) {
+				result.rejectValue("babyName", "notUnique", "Sadly this is not a unique baby name.");
+			}
+		}
+		if(result.hasErrors()) {
+			return "createJoy.jsp";
+		}
+		joyService.createJoy(newJoy);
+		return "redirect:/home";
+	}
+
+	// EDIT AND UPDATE ROUTING =========================================================
+	@GetMapping("/names/{id}/edit")
+	public String editJoy(HttpSession session, Model model, @PathVariable("id") Long id) {
+		// If User not logged in, redirect
+		if (session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		// ONLY JOY USER CAN DELETE
+		Joy joy = joyService.findJoy(id);
+		User user = userService.findUserByID((Long) session.getAttribute("userID"));
+		if(!joy.getUser().getId().equals(user.getId())){
+			System.out.println("WE HAVE CORROBORATED BABY AND USER");
+		    return "redirect:/home";
+		}
+		
+		model.addAttribute("user", user);
+		model.addAttribute("joy", joy);
+		
+		return "updateJoy.jsp";
+	}
+	
+	@PutMapping("/names/{id}/updateJoy")
+	public String updateJoy(@Valid @ModelAttribute("joy") Joy joy, BindingResult result, HttpSession session, @PathVariable("id") Long id) {
+		// If User not logged in, redirect
+		if (session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		// ONLY JOY USER CAN DELETE
+		User user = userService.findUserByID((Long) session.getAttribute("userId"));
+		if(!joy.getUser().getId().equals(user.getId())){
+			System.out.println("WE HAVE NOT CORROBORATED BABY AND USER");
+		    return "redirect:/home";
+		}
+		if(result.hasErrors()) {
+			return "updateJoy.jsp";
+		}
+		joyService.updateJoy(joy);
+		return "redirect:/home";
+	}
+	
+	//DELETE MAPPING ==========================================================
+	@DeleteMapping("/names/{id}/delete")
+	public String deleteJoy(HttpSession session, @PathVariable("id") Long id) {
+		// If User not logged in, redirect
+		if (session.getAttribute("userID") == null) {
+			return "redirect:/";
+		}
+		
+		// ONLY JOY USER CAN DELETE
+		Joy joy = joyService.findJoy(id);
+        User user = userService.findUserByID((Long) session.getAttribute("userId"));
+        if(!joy.getUser().getId().equals(user.getId())){
+            System.out.println("WE HAVE CORROBORATED BABY AND USER");
+            return "redirect:/home";
+        }
+
+        joy.setUsers(null);
+        joyService.updateJoy(joy);
+        user.getVotedJoys().remove(joy);
+        userService.updateUser(user);
+
+        joyService.deleteJoy(id);
+        System.out.println("WE HAVE EFFECTIVELY DELETED AND ADDRESSED VOTES");
+        return "redirect:/home";
+	}
+}

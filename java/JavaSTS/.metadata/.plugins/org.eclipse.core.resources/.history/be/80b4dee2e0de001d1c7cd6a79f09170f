@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> VIEW YOUR BUNDLE </title>
+<!-- THIS ROUTES TO LOCALHOST:8080/NAMES/BABYID -->
+</head>
+<body>
+	<h1>This bundle of joy is: </h1>
+	<h3> Black Belt - if user voted for it, include their prior vote. isVoted boolean</h3>
+</body>
+</html>

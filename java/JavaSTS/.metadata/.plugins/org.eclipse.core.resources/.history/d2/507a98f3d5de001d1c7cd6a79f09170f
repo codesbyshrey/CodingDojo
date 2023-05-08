@@ -1,0 +1,5 @@
+package com.codingdojo.joybundler.controllers;
+
+public class VoteController {
+
+}

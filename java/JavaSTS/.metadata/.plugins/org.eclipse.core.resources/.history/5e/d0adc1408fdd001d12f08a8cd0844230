@@ -1,0 +1,12 @@
+#application properties below added to connect to MySQL
+
+spring.datasource.url=jdbc:mysql://localhost:3306/safe-travels
+spring.datasource.username=root
+spring.datasource.password=rootroot
+spring.jpa.hibernate.ddl-auto=update
+
+# Necessary to pass data from controller to .jsp file
+spring.mvc.view.prefix=/WEB-INF/
+
+
+spring.mvc.hiddenmethod.filter.enabled=true

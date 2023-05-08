@@ -1,0 +1,21 @@
+package com.codingdojo.helloworld.controllers;
+
+import org.springframework.stereotype.Controller;
+
+import jakarta.servlet.http.HttpSession;
+@Controller
+public class SessionController {
+	public String index(HttpSession session) {
+		//session.setAttribute("count", 0);
+		if (session.getAttribute("count") == null) {
+			session.setAttribute("count", 0);
+		}
+		else {
+			// increment by 1 using get and set attribute
+		}
+		return "session.jsp";
+		// will automatically create session for you
+		// test if key is in session with getAttribute
+	}
+
+}
