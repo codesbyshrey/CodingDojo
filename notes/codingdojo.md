@@ -1,1 +1,0 @@
-# General Notes and Thoughts
