@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyPie Derby - PyPie Derby 2 </title>
+</head>
+<body>
+    <div>
+        <form action="/dashboard">
+            <input type="submit" value="Dashboard">
+        </form>
+        <form action="/logout">
+            <input type="submit" value="Log Out">
+        </form>
+    </div>
+    <div>
+        <h1>PyPie Derby</h1>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>PyPie By</th>
+                <th>Votes</th>
+            </thead>
+
+            
+            {% for pie in pies: %}
+            <tr>
+                <td>
+                    <a href="/show/{{pie['id']}}">{{pie['name']}}</a>
+                </td>
+                <td>{{pie['first_name']}}</td>
+                <td>{{pie['votes']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

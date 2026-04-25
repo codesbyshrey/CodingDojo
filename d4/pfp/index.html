@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8">
+          <title> Profile Page - Shreyas </title>
+          <meta name="viewport" content="width=device-width". initial-scale="1.0">
+          <link rel="stylesheet" href="styles.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     </head>
+     <body>
+
+          <!-- NAVBAR Assignment goes above main flex container -->
+          <div class="nav">
+               <div class="navbar">
+                    <h1 class="navtitle"> Profile </h1>
+                    <ul class="navlinks">
+                         <li> <a href="#"> Home </a></li>
+                         <li> <a href="#" class="active"> My Profile </a></li>
+                         <li> <a href="#"> Find Connections </a></li>
+                         <li> <button type="button" class="btn"> Sign Out </button></li>
+                    </ul>
+               </div>
+          </div>
+          <div class="navbar main"> <!-- MAIN FLEX CONTAINER -->
+               <div class="column1">
+                    <!-- User Card Assignment -->
+                    <div class="card user">
+                         <div class="header">
+                              <img src="icons/user-circle.png" alt="user-circle" class="pfp">
+                         </div>
+                         <div class="body">
+                              <h1 id="username"> Shreyas Sriram</h1>
+                              <h3>
+                                   <img src="icons/map-marker.png" alt="pin" class="icon">
+                                   Seattle, WA 
+                              </h3>
+                              <p>
+                                   Developer || Engineer || Problem-Solver <br>
+                                   Master of Shadows and the Internet
+                                   <!-- reminds me of Eragon and Shadeslayer-->
+                              </p>
+                              <p>
+                                   <a href="#">
+                                        <img src="icons/gear.png" alt="gear" class="icon">
+                                        EDIT PROFILE
+                                   </a>
+                              </p>
+                         </div>
+                    </div>
+
+                    <!-- User Education Card-->
+                    <div class="card">
+                         <div class="header">
+                              <h3> Education </h3>
+                         </div>
+                         <div class="body">
+                              <h2> Coding Dojo Full Stack Bootcamp </h2>
+                              <p class="dates"> January 2023 - April 2023 </p>
+                              <p> Call me Salazar Slytherin because I'm a Master of Python </p>
+                         </div>
+                    </div>
+               </div>
+               <!-- END OF COLUMN 1 WITH USER INFO AND EDUCATION BAR-->
+
+
+               <div class="column2"> <!-- Connections will likely have more overlap across the classes assigned to divs since they're structured similarly in this second column-->
+
+
+                    <!-- Connection Requests Container-->
+                    <div class="card">
+                         <div class="header">
+                              <span class="badge" id="requests"> 2 </span>
+                              <h3> Connection Requests </h3>
+                         </div>
+                         <ul class="cardlist">
+                              <li class="card-list-1" id="request1">
+                                   <span>
+                                        <img src="images/todd-s.jpg" alt="Todd" class="avatars"> Todd E
+                                   </span>
+                                   <span>
+                                        <img src="icons/accept-circle.png" alt="Accept" class="icon">
+                                        <img src="icons/close-circle.png" alt="Close" class="icon">
+                                   </span>
+                              </li>
+                              <li class="card-list-1" id="request2">
+                                   <span>
+                                        <img src="images/phil-s.jpg" alt="Phil" class="avatars"> Philly
+                                   </span>
+                                   <span>
+                                        <img src="icons/accept-circle.png" alt="Accept" class="icon">
+                                        <img src="icons/close-circle.png" alt="Close" class="icon">
+                                   </span>
+                              </li>
+                         </ul>
+                    </div>
+
+
+                    <!-- Connections Container -->
+                    <div class="card">
+                         <div class="header">
+                              <span class="badge" id="connections"> 1000+ </span>
+                              <h3> My Connections  </h3>
+                         </div>
+                         <ul class="cardlist">
+                              <li class="card-list-1 start">
+                                   <img src="images/adrien-s.jpg" alt="Adrien" class="avatars"> Adrien 
+                              </li>
+                              <li class="card-list-1 start">
+                                   <img src="images/anne-s.jpg" alt="Anne" class="avatars"> Anne 
+                              </li>
+                              <li class="card-list-1 start">
+                                   <img src="images/alayne-s.jpg" alt="Alayne" class="avatars"> Alayne 
+                              </li>
+                              <li class="card-list-1 start">
+                                   <img src="images/arry-s.jpg" alt="Arry" class="avatars"> Arry 
+                              </li>
+                         </ul>
+                         <div class="cardfooter">
+                              <a href="#"> View More </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <script src="script.js"> </script>
+     </body>
+</html>
+
+<!-- attempted to start implementing of the javascript commands with the connections that needed to be changed -->

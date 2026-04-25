@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DOM manipulation </title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="changeButtons">
+            <button onclick="changeBoxColor(this, 'red')">
+                Change to red
+            </button>
+            <button onclick="changeBoxColor(this, 'blue')">
+                Change to blue
+            </button>
+            <button onclick="changeBoxColor(this, 'yellow')">
+                Change to yellow
+            </button>
+            <button onclick="changeBoxColor(this, 'black')">
+                Change to black
+            </button>
+            <button onclick="changeBoxColor(this, 'green')">
+                Change to green
+            </button>
+        </div>
+        <div class="box">
+            
+        </div>
+        <div class="printButtons">
+            <button onclick="addTextToLog(this)">
+                Print hello
+            </button>
+            <button onclick="addTextToLog(this)">
+                Print good luck
+            </button>
+            <button onclick="addTextToLog(this)">
+                Print good bye
+            </button>
+        </div>
+        <div class="log">
+
+        </div>
+        <div class="hideRemoveButtons">
+            <button id = "hideShow" onclick="toggleCatImage(this)">
+                Hide or show image
+            </button>
+            <button onclick="removeImageAndButton(this)">
+                Remove image and previous button
+            </button>
+        </div>
+        <div class="image">
+            <img class="catImage" src="./images/tom.png" alt="Gray with white cat">
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!-- pretty much completed don't interfere more -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> PyPie Derby Login/Registration </title>
+     <!--
+          Register on the right side, login on the left
+          First + Last Name minimum of 3 characters
+          Validation for email, and password minimum 8 characters
+          FLASH FLASH FLASH FLASH FLASH
+          Redirects to /dashboard for user
+     -->
+</head>
+<body>
+     <h1 class="title"> Welcome to PyPie Derby </h1>
+     <div class="main">
+          <div class="leftPanel">
+               <h2> Register </h2>
+               <form action="/register" method="post">
+                    {% with messages = get_flashed_messages(category_filter =['register']) %}
+                         {% if messages %}
+                              {% for message in messages %}
+                              <p>{{message}}</p>
+                              {% endfor %}
+                         {% endif %}
+                    {% endwith %}
+                    <div>
+                         <label for="first_name"> First Name </label>
+                         <input class="form-control" type="text" name="first_name" placeholder="First Name">
+                    </div>
+                    <div>
+                         <label for="last_name"> Last Name </label>
+                         <input class="form-control" type="text" name="last_name" placeholder="Last Name">
+                    </div>
+                    <div>
+                         <label for="email"> Email </label>
+                         <input class="form-control" type="text" name="email" placeholder="Email">
+                    </div>
+                    <div>
+                         <label for="password"> Password </label>
+                         <input class="form-control" type="text" name="password" placeholder="********">
+                    </div>
+                    <div>
+                         <label for="confirm"> Confirm Password </label>
+                         <input class="form-control" type="text" name="confirm" placeholder="Confirm PW">
+                    </div>
+                    <div>
+                         <input class="button" type="submit" value="Register">
+                    </div>    
+               </form>
+          </div>
+          <div class="rightPanel">
+               <h2> Log In </h2>
+               <form action="/login" method="post">
+                    {% with messages = get_flashed_messages(category_filter =['login']) %}
+                         {% if messages %}
+                              {% for message in messages %}
+                                   <p>{{message}}</p>
+                              {% endfor %}
+                         {% endif %}
+                    {% endwith %}
+                    <div>
+                         <label for="email"> Email </label>
+                         <input class="form-control" type="text" name="email" placeholder="email@address.com">
+                    </div>
+                    <div>
+                         <label for="password"> Password </label>
+                         <input class="form-control" type="text" name="password" placeholder="********">
+                    </div>
+                    <input class="button" type="submit" value="Login">
+               </form>
+          </div>
+     </div>
+</body>
+</html>

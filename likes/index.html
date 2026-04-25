@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Likes</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <div class="network">
+          <h1> Network </h1>
+     </div>
+     <div class="feed">
+          <h1> Your Feed</h1>
+     </div>
+
+     <div class="flexmain">
+
+
+          <div class="col1">
+               <div>
+                    <img src="./user-circle.png" alt="User Image" class="user">
+               </div>
+               <div>
+                    <a href="#" class="avatar"> Add an Avatar </a>
+               </div>
+               <div class="profile">
+                    James Doe
+               </div>
+          </div>
+
+<!-- the easiest way to think about the top rows of each individual person's block is to consider it as its own flex navbar, just with a white background color. I'm going to create three divs for each person. Each div will have a border and margin-bottom. Each div will have a sub div that acts as the navbar that we have been creating, within which the # will be a span class that can be edited with the text similar to the weather changing or the button clicker login to logout text. Following that, there will be a second sub div within it with a small bit of text with the anchor links. Alright bet now we know what we're doing, the only pain left is to power through these hands and not break my brain over all of the class names lmao I cri everitiem-->
+
+          <div class="col2">
+
+
+               <div class="names">
+                    <div class="mininav">
+                         <p class="navtitle"> Neil M </p>
+                         <ul class="navlinks">
+                              <li>
+                                   <span id="neil"> 9 like(s) </span>
+                              </li>
+                              <li><button class="likes" onclick="increase(0)">
+                                   LIKE
+                              </button></li>
+                         </ul>
+                    </div>
+                    <div class="regulartext">
+                         I just set up this new discord bot, let me know what you all think. <a href="#">Link</a>
+                    </div>
+               </div>
+
+               <div class="names">
+                    <div class="mininav">
+                         <p class="navtitle">Nichole K</p> 
+                         <ul class="navlinks">
+                              <li>
+                                   <span id="nichole"> 12 like(s) </span> 
+                              </li>
+                              <li><button class="likes" onclick="increase(1)">
+                                   LIKE
+                              </button></li>
+                         </ul>
+                    </div>
+                    <div class="regulartext">
+                         Just finished my <a href="#">next comic</a>, check it out!
+                    </div>
+               </div>
+
+               <div class="names">
+                    <div class="mininav">
+                         <p class="navtitle">Jim R</p>
+                         <ul class="navlinks">
+                              <li>
+                                   <span id="jim"> 10 like(s) </span>
+                              </li>
+                              <li><button class="likes" onclick="increase(2)">
+                                   LIKE
+                              </button></li>
+                         </ul>
+                    </div>
+                    <div class="regulartext">
+                         I can't stop listening to the <a href="#">new album</a>. Who else is liking it?
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <script src="./script.js"></script>
+</body>
+</html>

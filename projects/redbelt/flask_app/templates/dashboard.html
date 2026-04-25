@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PyPie Derby 2 </title>
+</head>
+<body>
+    <div>
+        <form action="/pies">
+            <input type="submit" value="Pie Derby">
+        </form>
+        <form action="/logout">
+            <input type="submit" value="Log Out">
+        </form>
+    </div>
+    <div>
+        <h1>PyPies by {{this_user.first_name}}</h1>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Actions</th>
+            </thead>
+            {% for pie in this_user_pies: %}
+            <tr>
+                <td>{{pie.name}}</td>
+                <td>
+                    <a href="/edit/{{pie.id}}">edit</a>
+                    <a href="/delete/{{pie.id}}">delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <form action="/add_pie" method="post">
+        <h1>Add New PyPie</h1>
+        {% with messages = get_flashed_messages(category_filter=['add_pie']) %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="">
+        </div>
+        <div>
+            <label for="filling">Filling: </label>
+            <input type="text" name="filling">
+        </div>
+        <div>
+            <label for="crust">Crust: </label>
+            <input type="text" name="crust" id="">
+        </div>
+        <input type="submit" name="" id="" value="Add Pie">
+    </form>
+</body>
+</html>

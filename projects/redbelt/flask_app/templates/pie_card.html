@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{pie['name']}} By {{pie['first_name']}} - PyPie Derby 2 </title>
+</head>
+<body>
+    <div>
+        <form action="/dashboard">
+            <input type="submit" value="Dashboard">
+        </form>
+        <form action="/logout">
+            <input type="submit" value="Log Out">
+        </form>
+    </div>
+    <div>
+        <h1>{{pie['name']}} By {{pie['first_name']}}</h1>
+        <p>{{pie['filling']}}</p>
+        <p>with a {{pie['crust']}} crust.</p>
+        <p>Cast a Vote: </p>
+
+        
+        {% if pie['consumer_id'] == session['user_id']: %}
+            <form action="/dislike/{{pie['id']}}" method="post">
+                <input type="submit" name="" id="" value="Yuck">
+            </form>
+        {% else: %}
+            <form action="/like/{{pie['id']}}" method="post">
+                <input type="submit" name="" value="Delicious">
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

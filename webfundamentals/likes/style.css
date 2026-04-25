@@ -1,0 +1,101 @@
+
+/* tbh not the prettiest and I think there's a much better way of going about setting it up in terms of prettiness. Functionality was much easier to introduce comparatively, I'm still really poor with imagining the way the HTML and CSS interact which is what I should really look after for the exam */
+
+*{
+     font-family: sans-serif;
+}
+
+.network{
+     margin-left: 150px;
+     margin-right: 150px;
+     color: white;
+     background-color: black;
+     padding: 20px;
+     display: flex;
+}
+.feed{
+     margin-right: 150px;
+     margin-left: 150px;
+     align-items: center;
+     padding: 10px;
+     text-align: center;
+     display: flex;
+}
+
+/* We have taken care of the top two divs who are stacked. They could use a little less hardcoding with the numbers, probably better to flex them on some level to be honest but let's address that later. */
+
+/* Social Feed CSS is below  */
+
+.flexmain {
+     border: 2px solid lightgrey;
+     display: flex;
+     margin-left: 150px;
+     margin-right: 150px;
+     align-items: top;
+     padding: 20px;
+     justify-content: space-between;
+}
+
+.col1{
+     flex: 2;
+     align-items: center;
+     border: 2px solid black;
+     text-align: center;
+     vertical-align: middle;
+}
+.profile{
+     text-align: center;
+     align-items: center;
+     padding: 10px;
+     margin-top: 10px;
+     font-size: 30px;
+     font-style: bold;
+}
+.user {
+     padding: 10px;
+     margin-bottom: 20px;
+     height: 70px;
+     border-radius: 50%;
+}
+.avatar{
+     height: 30px;
+     margin-bottom: 50px;
+     padding: 10px;
+}
+
+/* Completed with the left side column, moving on to the right */
+
+.col2{
+     flex: 6;
+}
+.navtitle{
+     margin-left: 20px;
+     margin-right: 20px;
+}
+.navlinks{
+     display: flex;
+     list-style-type: none;
+     align-items: center;
+     justify-content: space-evenly;
+     width: 40%;
+     margin-left: 80px;
+}
+.regulartext{
+     margin-left: 20px;
+}
+.names{
+     border: 2px solid black;
+     margin-left: 20px;
+     margin-bottom: 15px;
+     padding: 15px;
+}
+.mininav{
+     display: flex;
+     margin-bottom: 15px;
+     align-items: center;
+}
+.likes{
+     background-color: goldenrod;
+     border: 2px solid black;
+     box-shadow: 0px 5px 5px 0px black;
+}

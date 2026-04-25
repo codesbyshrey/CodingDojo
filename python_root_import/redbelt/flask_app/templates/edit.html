@@ -1,0 +1,49 @@
+<!-- this page is done, basically complete at this point -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> PyPie Derby EDIT YOUR PIE </title>
+     <!--
+          Edit your pie page, dashboard and logout buttons as expected
+          Edit form must PREPOPULATE with pie from database
+          User can successfully edit a pie, all forms should be filled out VALIDATION
+          Redirect to dashboard even after the pie has been edited
+          Logout link will log the user out
+     -->
+</head>
+<body>
+     <div class="dashLink">
+          <a href="/pies" class="buttonLink"> PIE DERBY </a>
+          <a href="/logout" class="buttonLink"> LOG OUT </a>
+     </div>
+     {% if pie %}
+          <h1> Edit {{pie.name}} </h1>
+          {% with messages = get_flashed_messages() %}
+               {% if messages %}
+                    {% for message in messages %}
+                         <p>{{message}}</p>
+                    {% endfor %}
+               {% endif %}
+          {% endwith %}
+          <!-- should have data prepopulated, should work by adding value parameter to inputs with jinja tags for the proper data type -->
+          <form action="/edit/{{pie.id}}" class="editPie" method="POST">
+               <label for="name" class="form-label"> Pie Name </label>
+               <input type="text" value="{{pie.name}}" class="form-control" name="name">
+               <br> <br>
+               <label for="filling" class="form-label"> Filling </label>
+               <input type="text" value="{{pie.filling}}" class="form-control" name="filling">
+               <br> <br>
+               <label for="crust" class="form-label"> Crust </label>
+               <input type="text" value="{{pie.crust}}" class="form-control" name="crust">
+               <br> <br>
+     {% endif %}
+          <input type="submit" value="Edit This Pie" class="input">
+     </form>
+</body>
+</html>

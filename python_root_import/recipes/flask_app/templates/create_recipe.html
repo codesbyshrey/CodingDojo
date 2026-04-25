@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> New recipe </title>
+</head>
+<body>
+    <h1>
+        Add a new recipe!
+    </h1>
+    <p>
+        <a href="/recipes">
+            Back to recipes
+        </a>
+    </p>
+    <p>
+        <a href="/user/logout" >
+            Logout
+        </a>
+    </p>
+    <form method="POST" action="/recipe/create">
+        <div>
+            <label>
+                Name:
+            </label>
+            <input type="text" name="name" /> 
+            {% for message in get_flashed_messages( category_filter = ['error_recipe_name'] ) %}
+                {{message}}
+            {% endfor %}
+        </div>
+        <div>
+            <label>
+                Description:
+            </label>
+            <textarea type="text" name="description"> </textarea>
+            {% for message in get_flashed_messages( category_filter = ['error_recipe_description'] ) %}
+                {{message}}
+            {% endfor %}
+        </div>
+        <div>
+            <label>
+                Instructions:
+            </label>
+            <textarea type="text" name="instructions"> </textarea>
+            {% for message in get_flashed_messages( category_filter = ['error_recipe_instructions'] ) %}
+                {{message}}
+            {% endfor %}
+        </div>
+        <div>
+            <label>
+                Date cooked/made:
+            </label>
+            <input type="date" name="cooked_date" /> 
+            {% for message in get_flashed_messages( category_filter = ['error_recipe_cooked_date'] ) %}
+                {{message}}
+            {% endfor %}
+        </div>
+        <div>
+            <label>
+                Under 30 minutes:
+            </label>
+            <div>
+                Yes: <input type="radio" name="under_30" value="1" checked /> 
+                No: <input type="radio" name="under_30" value="0" /> 
+            </div>
+        </div>
+       
+        <button>Submit</button>
+    </form>
+</body>
+</html>

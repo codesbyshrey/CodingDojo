@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="EN">
+     <head>
+          <title>
+               Shreyas CodingDojo Web Page"
+          </title>
+          <!-- Meta is a self closed element-->
+          <meta charset="UTF-8">
+          <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+          <nav>
+               <h1>
+                    Welcome to HTML
+               </h1>
+               <h6>
+                    This is a header 6 size. H1 and H23 are commonly used?
+                    Consider articles with subheadings.
+               </h6>
+          </nav>
+          <p>
+               This tag helps you create some paragraphs. HyperText Markup Language (HTML) is the main markup language for all web pages. Its purpose is to communicate to the browser, and ultimately the client, the meaning of the content that we wish to place on a web page. Even as you look at this page, there are lots of different pieces: the navigation pane on the left, the breadcrumb navigation above, a search bar, headers, regular text, lists, and more! HTML is the language we use to create this structure.
+               The HTML and CSS chapters are designed to take you through the theoretical components of the web as well as the first step in creating a web application (building out the client-side). When building a web application we believe it is best to always start with a clickable prototype involving only HTML, CSS, and Javascript so it is only natural to teach these technologies first.               
+               Anchor tags and images next. Link your page to another page or something else in the web. They do require attributes.
+               href - reference to hyperlink
+          </p>
+          <a href="https://www.google.com/" target="blank">
+               Voila, Google (has target as blank so it'll be in a new tab)
+          </a>
+          <a href="./assets/about.html" target="blank">
+               Take me to about.html, nested in assets
+          </a>
+          <ul>
+               <li>
+                    Cats 
+                    <img src="./images/cat.jpeg">
+               </li>
+               <li>
+                    Dogs
+               </li>
+               <li>
+                    Hamster
+               </li>
+          </ul>
+          <ol>
+               <li class="pet">
+                    Cats 
+                    <img src="./images/cat.jpeg">
+               </li>
+               <li class="pet">
+                    Dogs
+               </li>
+               <li class="pet">
+                    Hamster
+               </li>
+          </ol>
+          <table>
+               <tr>
+                    <th>
+                         First Name
+                    </th>
+                    <th>
+                         Last Name
+                    </th>
+                    <th>
+                         Identifier
+                    </th>
+               </tr>
+               <tr>
+                    <td>
+                         Alex
+                    </td>
+                    <td> 
+                         Miller
+                    </td>
+                    <td>
+                         12345
+                    </td>
+               </tr>         <tr>
+                    <td>
+                         Smith
+                    </td>
+                    <td> 
+                         Martha
+                    </td>
+                    <td>
+                         98765
+                    </td>
+               </tr>
+          </table>
+          <form>
+               <fieldset>
+                    <div>
+                         <label for="firstName">
+                              <!-- the label above and name/id below allow you to click
+                              on the text directly instead of the box, and it will automatically
+                              push the cursor into the box. handy.-->
+                              First Name: 
+                         </label>
+                         <input type="text" name ="firstName" id="firstName">
+                    </div>
+                    <div>
+                         <label for="lastName">
+                              Last Name: 
+                         </label>
+                         <input type="text" name="lastName" id="lastName" value="Sriram">
+                    </div>
+                    <div>
+                         <label for="password">
+                              Password:  
+                         </label>
+                         <input type="text" name="password" id="password">
+                    </div>
+                    <input type="date" name="DOB">
+                    <input type="color" name="text_color">
+                    <div>
+                         <h3>
+                              Do you read books?
+                         </h3>
+                         <label for="yesBook">
+                              Yes
+                         </label>
+                         <input  type="radio" name="doYouRead" id="yesBook">
+                         <label for="noBook">
+                              No
+                         </label>
+                         <input  type="radio" name="doYouRead" id="noBook">
+                         <!-- by keeping the same name of doYouRead up above, you can select
+                         a single button at a time, rather than selecting multiple. So naturally,
+                         probably works the other way as well for MC questions style formatting-->
+                    </div>
+                    <div>
+                         <h3>
+                              What genres do you like?
+                         </h3>
+                         <label for="comedy">
+                              Comedy
+                         </label>
+                         <input type="checkbox" name="genres" id="comedy">
+                         <label for="adventure">
+                              Adventure
+                         </label>
+                         <input type="checkbox" name="genres" id="adventure">
+                         <label for="horror">
+                              Horror
+                         </label>
+                         <input type="checkbox" name="genres" id="horror">
+                         <!-- comparatively, checkbox allows select and unselect and multiselect
+                         radio buttons might as well be used for boolean questions, selecting one or the other-->
+                    </div>
+                    <div>
+                         <label for="country">
+                              Country
+                         </label>
+                         <select name="country" id="country">
+                                  <option>
+                                   Please select an option below
+                                  </option>
+                                   <option>
+                                   United States
+                                  </option>
+                                  <option>
+                                   Canada
+                                  </option>
+                                  <option>
+                                   Mexico
+                                  </option>
+                         </select>
+                    </div>
+                    <div>
+                         <label for="comment">
+                              Leave us a comment:
+                         </label>
+                         <textarea name="comment" id="comment" placeholder="please leave us a comment here"></textarea>
+                    </div>
+                    <div>
+                         <!--placeholder attribute only works if the content box is empty. separate q, notes.-->
+                         <input type="submit" value="Register">
+                         <button type="submit">
+                              Register
+                         </button>
+                              <!-- going to learn how to prevent reload-->
+                    </div>
+               </fieldset>
+          </form>
+          <img src="./images/cat.jpeg">
+     </body>
+</html>

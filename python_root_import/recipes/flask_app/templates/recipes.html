@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recipes </title>
+</head>
+<body>
+    <h1>
+        Welcome, {{session['first_name']}}
+    </h1>
+    <p>
+        <a href="/recipe/new">
+            Create
+        </a>
+    </p>
+    <p>
+        <a href="/user/logout" >
+            Logout
+        </a>
+    </p>
+    <div>
+        All posted recipes:
+    </div>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Under
+            </th>
+            <th>
+                Posted By
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+        {% for recipe in list_recipes: %}
+        <tr>
+            <td>
+                {{recipe.name}}
+            </td>
+            <td>
+                {% if recipe.under_30 == 1: %}
+                    Yes
+                {% else: %}
+                    No
+                {% endif%}
+            </td>
+            <td>
+                {{recipe.user.first_name}} {{recipe.user.last_name}}
+            </td>
+            <td>
+                <a href="/recipes/{{recipe.id}}">
+                    View recipe
+                </a>
+                {% if session['user_id'] == recipe.user.id : %}
+                |
+                <a href="/recipes/{{recipe.id}}/update" >
+                    Edit
+                </a>
+                |
+                <a href="/recipes/{{recipe.id}}/delete" >
+                    Delete
+                </a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

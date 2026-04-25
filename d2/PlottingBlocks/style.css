@@ -1,0 +1,49 @@
+.container{
+     width: 950px;
+     background-color: silver;
+     margin: 0px auto;
+     padding: 25px
+}
+.top-nav {
+     height: 150px;
+     background-color: green;}
+.side-nav {
+     height: 300px;
+     width: 200px;
+     background-color: blue;
+}
+.main {
+     height: 450px;
+     width: 800px;
+     background-color: red;
+     padding-right: 20px;
+     margin-left: 10px;
+
+}
+.sub-content {
+     height: 200px;
+     width: 205px;
+     background-color: yellow;
+     display: inline-block;
+     margin-top: 20px;
+     margin-left: 15px;
+     padding: 10px;
+
+}
+#advertisement {
+     height: 120px;
+     width: 715px;
+     background-color: purple;
+     margin-top: 30px;
+     margin-left: 15px;
+}
+
+.row{
+     display: flex;
+     flex-direction: row;
+     gap: 10px;
+     margin-top: 20px;
+     vertical-align:top;
+}
+
+/* biggest struggle right now is the spacing between the yellows. padding is within an element, margins are relative to other elements. need to improve using the existing CSS levels, had to modify the numbers a little too much compared to assigning properties. */

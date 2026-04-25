@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> LOGIN and Registration </title>
+</head>
+
+<body>
+     <h1 class="title"> Registration and Login </h1>
+     <!-- Most pages have registration on right side with login on left, so let's stick with that pattern of building -->
+     <div class="main">
+          <div class="register">
+               <h3 class="reg"> Register User </h3>
+               <form action="/register" method="post">
+                    {% with messages = get_flashed_messages(category_filter =['register']) %}
+                         {% if messages %}
+                              {% for message in messages %}
+                                   <p>{{message}}</p>
+                              {% endfor %}
+                         {% endif %}
+                    {% endwith %}
+                    <!-- Remember that bootstrap has form-control and form-select classes that can be auto assigned to make everything look pretty for ya -->
+                    <div>
+                         <label for="first_name"> First Name: </label>
+                         <input class="form-control" type="text" name="first_name" placeholder="First Name Here">
+                    </div>
+                    <div>
+                         <label for="last_name"> Last Name: </label>
+                         <input class="form-control" type="text" name="last_name" placeholder="Last Name Here">
+                    </div>
+                    <div>
+                         <label for="email"> Email: </label>
+                         <input class="form-control" type="text" name="email" placeholder="Email Address">
+                    </div>
+                    <div>
+                         <label for="password"> Password:</label>
+                         <input class="form-control" type="text" name="password" placeholder="********">
+                    </div>
+                    <div>
+                         <label for="confirm"> Confirm Password: </label>
+                         <input class="form-control" type="text" name="confirm" placeholder="Confirm PW">
+                    </div>
+                    <div class="space">
+                         <input class="reg" type="submit" value="Register">
+                    </div>
+               </form>
+          </div>
+
+          <div class="login">
+               <h3 class="log">Login</h3>
+               <form action="/login" method="post">
+                    {% with messages = get_flashed_messages(category_filter =['login']) %}
+                         {% if messages %}
+                              {% for message in messages %}
+                                   <p>{{message}}</p>
+                              {% endfor %}
+                         {% endif %}
+                    {% endwith %}
+                    <div>
+                         <label for="email"> Email: </label>
+                         <input class="form-control" type="text" name="email" placeholder="Email">
+                    </div>
+                    <div>
+                         <label for="password"> Password: </label>
+                         <input class="form-control" type="text" name="password" placeholder="********">
+                    </div>
+                    <div>
+                         <input class="log" type="submit" value="Login">
+                    </div>
+               </form>
+          </div>
+     </div>
+</body>
+</html>

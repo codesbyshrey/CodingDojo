@@ -1,0 +1,35 @@
+
+* {
+     font-family: sans-serif;
+}
+
+div {
+     background-color: teal;
+     text-align: left;
+}
+
+.row {
+     display: flex;
+     /* border: 1px solid lightgrey;  */
+     gap: 10px;
+     background-color: white;
+}
+.col {
+     flex: 1;
+}
+.col2{
+     flex: 2;
+}
+.col3{
+     flex: 3;
+}
+
+.col, .col2, .col3{
+     padding: 20px;
+     margin: 5px;
+     color: white;
+}
+
+/* changing flex values determines the total added, think of it as fractions
+     originally added border within row class so I could ensure I was spacing out correctly and dividing up my CSS class assignments properly
+     gap was introduced to keep even spacing between div elements within the row */

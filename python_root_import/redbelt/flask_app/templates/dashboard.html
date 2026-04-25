@@ -1,0 +1,73 @@
+<!-- this page is mostly done, minimal interference needed left -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> PyPie Derby Dashboard </title>
+     <!--
+          Show pies belonging to logged in user
+          Links for editing and deleting pies within table (left side)
+          Display logged in user name by pie list (PyPies by {{user.first_name}})
+          Links to go to Pie Derby (goes to all pies /pies (derby.html))
+          Pie Validations to add new PyPie should include all fields
+     -->
+</head>
+<body>
+     <div class="dashLink">
+          <a href="/pies" class="buttonLink"> PIE DERBY </a>
+          <a href="/logout" class="buttonLink"> LOG OUT </a>
+     </div>
+
+     <div class="main">
+          <!-- keep some div names the same as your loginreg page since this is a two panel page anyways. left side will be larger on this page technically so you can edit that afterwards for neatness, not needed for MVP / submission yet -->
+          <div class="leftPanel">
+               <h1> PyPies by {{user.first_name}} </h1>
+               <table class="table table-dark">
+                    <tr>
+                         <th> Name </th>
+                         <th> Actions </th>
+                    </tr>
+                    {% for pie in all_pies %}
+                         <tr>
+                              <td> {{pie.name}} {{pie.last}} </td>
+                              <td>
+                                   <a href="/edit/{{pie.id}}" class="actionLinks"> EDIT PIE </a>
+                                   <a href="/delete/{{pie.id}}" class="actionLinks"> DELETE PIE</a>
+                              </td>
+                         </tr>
+                    {% endfor %}
+               </table>
+          </div>
+          <!-- END OF LEFT PANEL WITH PIES BEING SHOWN IN TABLE -->
+          <!-- START OF RIGHT PANEL WITH FORM TO INCLUDE NEW PIES -->
+          <div class="rightPanel">
+               <h1> Add New PyPie </h1>
+               {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                         {% for message in messages %}
+                              <p>{{message}}</p>
+                         {% endfor %}
+                    {% endif %}
+               {% endwith %}
+               <form action="/pie/create" method="POST">
+                    <label for="name" class="form-label"> Pie Name </label>
+                    <input type="text" placeholder="Pie Name" name="name" class="form-control">
+                    <br> <br>
+                    <label for="filling" class="form-label"> Filling </label>
+                    <input type="text" placeholder="Filling" name="filling" class="form-control">
+                    <br> <br>
+                    <label for="crust" class="form-label"> Crust Type </label>
+                    <input type="text" placeholder="Crust Type" name="crust" class="form-control">
+                    <br> <br>
+                    <!-- Add Pie Button should display Pie in Left Panel-->
+                    <input type="submit" class="input" value="Add Pie">
+               </form>
+          </div>
+     </div>
+</body>
+</html>

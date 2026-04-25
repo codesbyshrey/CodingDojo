@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <title> Displaying Your User </title>
+</head>
+
+<body>
+     <h1> Users </h1>
+     <h2>{{user.full_name()}}</h2>
+     <p1>Email: {{user.email}}</p1>
+     <div>
+          <p1>Created at: {{user.created_at}}</p1>
+     </div>
+     <div>
+          <p1>Updated at: {{user.updated_at}}</p1>
+     </div>
+     <form action="/user/delete" method="post">
+          <input type="hidden" name="id" value="{{user.id}}">
+          <button type="submit"> Delete Me </button>
+     </form>
+
+     <div>
+          <a href="/user"> Main Page </a>
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+SELECT * FROM dojos;
+-- checkbox 1 to create three new dojos
+INSERT INTO dojos (name) VALUES ("Python"), ("WebFun"), ("Java");
+
+-- checkbox 2 to delete the 3 dojos just created
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+
+-- these should be changed back to 1-2-3-4-5-6 since we accidentally ran the add 3 dojos too many times so our numbers in the file were +6 of the original
+-- but logically 1-2-3 would be the commands
+
+-- checkbox 3 to create three more dojos
+INSERT INTO dojos (name) VALUES ("Flask"), ("Ajax"), (".NET")
+
+-- shifting to ninjas to see that we're affecting the table
+SELECT * FROM ninjas;
+
+-- create 3 ninjas belonging to the first dojo
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (4, "Shreyas", "Sriram", 25)
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (4, "Shrey", "Sriram", 24)
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (4, "Shrey", "Sri", 23)
+
+-- create 3 ninjas belonging to the second dojo (showing they can be on same line)
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (5, "Shreyas", "Sriram", 25), (5, "Shrey", "Sriram", 24), (5, "Shrey", "Sri", 23);
+
+-- create 3 ninjas belonging to the third dojo (trying it a bit funky)
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (6, "Shreyas"", "Sriram", 25), (6, "Shrey", "Sri", 23);
+INSERT INTO ninjas (dojo_id, first_name, last_name, age) VALUES (6, "Shrey", "Sriram", 24)
+
+
+-- retrieve all ninjas from first dojo
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+-- retrieve all ninjas from last dojo
+SELECT * FROM ninjas WHERE dojo_id=6;
+
+-- retrieve the last ninja's dojo (find the dojo_id (which should be 6))
+-- but we have to do it without directly pointing at the dojo_id
+-- Abebe came clutch to find it in documentation
+SELECT a.id, a.name, a.created_at, a.updated_at 
+FROM dojos a, ninjas b
+WHERE a.id = b.dojo_id
+order by b.id DESC
+limit 1;
+
+-- select the overlapping columns from dojos first then ninjas, and assign the dojo_id from ninjas as the order
+-- then we order it descending based on the ninjas, with those from the last dojo being provided first
+-- the limit function enables us to only receive 1 value spit back out, which should be the last ninja's
+-- if we changed limit to 4, it would show the bottom 4 ninjas where id would be 6, 6, 6, 5
+
+-- Submit the text file w/ the queries run in the shell

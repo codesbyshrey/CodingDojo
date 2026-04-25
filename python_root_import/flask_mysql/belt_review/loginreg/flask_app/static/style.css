@@ -1,0 +1,36 @@
+
+.title {
+     display: flex;
+     justify-content: center;
+}
+
+.register, .login {
+     height: 750px;
+     width: 500px;
+     background-color: tan;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+}
+
+.main {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+}
+
+label {
+     color: whitesmoke;
+}
+
+.reg{
+     color: blue;
+}
+.log {
+     color: rebeccapurple;
+}
+.space {
+     margin-top: 20px;
+}

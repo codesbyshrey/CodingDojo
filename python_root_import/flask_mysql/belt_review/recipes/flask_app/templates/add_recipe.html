@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> Create Your Recipe </title>
+</head>
+<body>
+     <nav class="navInfo">
+          <h1>Add a New Recipe!</h1>
+          <a href=""> Return to Recipes </a>
+          <a href="/logout"> Logout </a>
+     </nav>
+
+
+     <div class="mainRecipe">
+          <form action="/create/recipe" method="post">
+               {% with messages = get_flashed_messages(category_filter = ['recipe']) %}
+                    {% if messages %}
+                         {% for message in messages %}
+                              <p>{{message}}</p>
+                         {% endfor %}
+                    {% endif %}
+               {% endwith %}
+
+               <div class="row">
+                    <div class="recLeft">
+                         <div>
+                              <label for="name"> Recipe Name </label>
+                              <input class="form-control" type="text" name="name" placeholder="Recipe Name">
+                         </div>
+                         <div>
+                              <label for="description"> Description </label>
+                              <input class="form-control" type="text" name="description" placeholder="Rec Desc">
+                         </div>
+                         <div>
+                              <label for="instruction"> Instructions </label>
+                              <input class="form-control" type="text" name="instruction" placeholder="Rec Instructions">
+                         </div>
+                    </div>
+
+                    <div class="recRight">
+                         <div>
+                              <p> Date Cooked/Made:
+                                   <label for="date_cooked"></label>
+                                   <input class="form-control" type="date" name="date_cooked" placeholder="Date">
+                              </p>
+                         </div>
+                         <div>
+                              <p>
+                                   <label for="under"> Under 30 minutes?</label>
+                              <div>
+                                   <input type="radio" name="under" value="0" placeholder="Under">
+                                   <label for="0"> No </label>
+                              </div>
+                              <div>
+                                   <input type="radio" name="under" value="1" placeholder="Over">
+                                   <label for="1"> Yes </label>
+                              </div>
+                              </p>
+                         </div>
+                         <input type="submit" value="Submit">
+                    </div>
+
+                    
+               </div>
+          </form>
+     </div>
+</body>
+</html>

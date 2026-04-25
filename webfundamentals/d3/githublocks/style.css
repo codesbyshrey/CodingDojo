@@ -1,0 +1,41 @@
+
+*{
+     align-items: center;
+     text-align: center;
+     padding: 5px;
+}
+
+.container{
+     background-color:lightgrey;
+     display:block;
+     height:950px;
+     padding:20px;
+}
+
+.row {
+     height: 250px;
+     display: flex;
+     margin-bottom: 20px;
+     justify-content: space-evenly;
+}
+
+.row1{
+     background-color: lightskyblue;
+
+}
+.row2{
+     background-color: lightcoral;
+
+}
+.row3{
+     background-color: white;
+
+}
+
+.images{
+     height: 225x;
+     width: 225px;
+     display:inline-flex;
+     background: white;
+     border-radius: 25%;
+}

@@ -1,0 +1,28 @@
+.changeButtons, .printButtons, .hideRemoveButtons{
+    display:flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.box, .log{
+    width: 250px;
+    height: 60px;
+    background-color: aqua;
+    margin-top: 20px;
+}
+
+.log{
+    border: 1px solid black;
+    background-color: white;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.catImage{
+    width: 300px;
+    margin-top: 20px;
+}
+
+.hideImage{
+    display: none;
+}

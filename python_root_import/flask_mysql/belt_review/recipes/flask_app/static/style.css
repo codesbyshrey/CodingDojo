@@ -1,0 +1,71 @@
+.title {
+     color: purple;
+     display: flex;
+     justify-content: center;
+}
+.main {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+}
+
+
+.leftPanel {
+     border: 3px solid black;
+     width: 400px;
+     
+}
+.rightPanel {
+     border: 3px solid black;
+     width: 400px;
+}
+
+
+.nav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     gap: 20px;
+     margin-left: 20px;
+}
+.title {
+     margin-left: -100px;
+}
+.navInfo {
+     display: flex; 
+     flex-direction: row;
+     justify-content: space-around;
+}
+
+
+.mainRecipe {
+     display: flex;
+     flex-direction: row;
+     height: 600px;
+     justify-content: center;
+}
+.recLeft {
+     display: flex;
+     flex-direction: column;
+     
+     width: 300px;
+     height: 300px;
+}
+.recRight {
+     display: flex;
+     flex-direction: column;
+     
+     width: 300px;
+     height: 300px;
+     
+}
+.tableContent{
+     border: 5px solid black;
+     width: 1200px;
+     height: 400px;
+     margin-left: 40px;
+     margin-top: 30px;
+}
+.marginLeft {
+     margin-left: 30px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+     <title> Dojo Survey </title>
+</head>
+<body>
+     <main>
+          <form class = "mainform" action="/process_form" method="POST">
+
+               <div class="inputName">
+                    <label for="name"> NAME </label>
+                    <input type="text" class="nameBox" id="name" name="name">
+               </div>
+
+               <div class="locationTag">
+                    <label for="location"> Dojo Location </label>
+                    <select name="location" id="location">
+                         <option value="seattle"> Seattle </option>
+                         <option value="burbank"> Burbank </option>
+                         <option value="chicago"> Chicago </option>
+                         <option value="san jose"> San Jose </option>
+                         <option value="online"> Online </option>
+                    </select>
+               </div>
+
+               <div class="languageTag">
+                    <label for="fav_lang"> Favorite Language </label>
+                    <select name="fav_lang" id="fav_lang">
+                         <option value="html"> HTML </option>
+                         <option value="css"> CSS </option>
+                         <option value="javascript"> JS </option>
+                         <option value="C++"> C++ </option>
+                         <option value="Python"> Python </option>
+                         <option value="Java"> Java </option>
+                    </select>
+               </div>
+
+               <div>
+                    <textarea name="comment" id="comment" cols="50" rows="10" placeholder="... Input Comment Here..."></textarea>
+               </div>
+               <button class="create_button"> Create </button>
+          </form>
+     </main>
+<script src="../static/index.js"></script>
+</body>
+</html>

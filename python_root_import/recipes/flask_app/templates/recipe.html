@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recipes </title>
+</head>
+<body>
+    <h1>
+        Welcome, {{session['first_name']}}
+    </h1>
+    <p>
+        <a href="/recipes">
+            Back to recipes
+        </a>
+    </p>
+    <p>
+        <a href="/user/logout" >
+            Logout
+        </a>
+    </p>
+    <h2>
+        {{current_recipe.name}}
+    </h2>
+    <p>
+        Posted by: {{current_recipe.user.first_name}}
+    </p>
+    <div>
+        <p> 
+            Description: {{current_recipe.description}}
+        </p>
+        <p>
+            Under 30?: 
+            {% if current_recipe.under_30 == 1: %}
+                Yes
+            {% else: %}
+                No
+            {% endif%}
+        </p>
+        <p> 
+            Instructions: {{current_recipe.instructions}}
+        </p>
+        <p>
+            Date made: {{current_recipe.cooked_date}}
+        </p>
+    </div>
+</body>
+</html>

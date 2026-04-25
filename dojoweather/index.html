@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Dojo Weather </title>
+          <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+          <nav>
+               <h1 class="title">
+                    DojoWeather
+               </h1>
+               <div class="cities">
+                    <p onclick="displayMessage(this)">
+                         Burbank
+                    </p>
+                    <p onclick="displayMessage(this)">
+                         Chicago
+                    </p>
+                    <p onclick="displayMessage(this)">
+                         Dallas
+                    </p>
+               </div>
+          </nav>
+          <main>
+               <div class="currentCity">
+                    <h2> San Jose </h2>
+                    <div class="temperatureOption">
+                         <p>
+                              Show Temperature In: 
+                         </p>
+                         <select title="select" name="temp" id="temperature" onchange="swapTemp(this)">
+                              <option value="C"> Celsius </option>
+                              <option value="F"> Fahrenheit </option>
+                         </select>
+                    </div>
+               </div>
+
+               <section class="dailyForecast">
+                    <div class="weatherItem">
+                         <h3> Today </h3>
+                         <img class="weatherImage" src="./assets/some_rain.png" alt="Rainy" >
+                         <p>
+                              Some rain
+                         </p>
+                         <div class="maxMinDegree">
+                              <div class="maxDegree">
+                                   <span class="degree">24</span> d
+                              </div>
+                              <div class="minDegree">
+                                   <span class="degree">18</span> d
+                              </div>
+                         </div>
+                    </div>
+                    <div class="weatherItem">
+                         <h3> Tomorrow </h3>
+                         <img class="weatherImage" src="./assets/some_sun.png" alt="Sunny">
+                         <p>
+                              Some sun
+                         </p>
+                         <div class="maxMinDegree">
+                              <div class="maxDegree">
+                                   <span class="degree">27</span> d
+                              </div>
+                              <div class="minDegree">
+                                   <span class="degree">19</span> d
+                              </div>
+                         </div>
+                    </div>
+                    <div class="weatherItem">
+                         <h3> Friday </h3>
+                         <img class="weatherImage" src="./assets/some_clouds.png" alt="Cloudy">
+                         <p>
+                              Some clouds
+                         </p>
+                         <div class="maxMinDegree">
+                              <div class="maxDegree">
+                                   <span class="degree">21</span> d
+                              </div>
+                              <div class="minDegree">
+                                   <span class="degree">16</span> d
+                              </div>
+                         </div>
+                    </div>
+                    <div class="weatherItem">
+                         <h3> Saturday </h3>
+                         <img class="weatherImage" src="./assets/some_sun.png" alt="Sunny">
+                         <p>
+                              Some sun
+                         </p>
+                         <div class="maxMinDegree">
+                              <div class="maxDegree">
+                                   <span class="degree">26</span> d
+                              </div>
+                              <div class="minDegree">
+                                   <span class="degree">21</span> d
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </main>
+          <div class="cookie">
+               <img src="./assets/cookie.png" alt="Cookie">
+               <div class="cookieContent">
+                    <h3>Stop! Cookie Time </h3>
+                    <p>We use cookies (sadly not the edible kind) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read More...</a></p>
+               </div>
+               <button class="cookieAccept" onclick="acceptCookie(this)">
+                    I Accept
+               </button>
+          </div>
+          <script src="./script.js"> </script>
+     </body>
+</html>
+
+<!-- Things to get done / general note taking 
+
+     YELLOW BELT WILL HAVE VERY SIMILAR SET OF FEATURE REQUIREMENTS 
+     navbar like div at the top, flex
+     city and show temperature, likely flex
+     another one with 4 elements, with flexbox within them with columns - text, image, text. 
+     we don't need flex for the cookies as it will be a fixed position
+
+     - recreate the look of the weather forecast page
+     - used position: fixed; to maintaint he cookie policy message
+     - when user accepts cookie policy, hide the fixed message
+     - when user clicks on a city, alert with message loading
+     - challenge yourself to use select to convert temperatures on display
+-->

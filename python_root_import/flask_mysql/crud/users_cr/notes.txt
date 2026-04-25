@@ -1,0 +1,13 @@
+
+1. Objecties - practice connecting Flask to datbase
+2a. Practice display and creating data from/into the database
+2b. Practice full CRUD operations with database
+
+
+Users_CR
+ - use the users-schema in the mySQL course
+ - create a new Flask project
+ - create 2 HTML pages, read (all) and create
+ - diplsy all users from the database on the Read pages
+ - when the form is submitted, new user is inserted into database
+ - home button can redirect to read all after creating a new user and they appear at the bottom of the table

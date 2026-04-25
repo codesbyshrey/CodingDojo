@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> Edit Your Recipe </title>
+</head>
+<body>
+     <h1>Edit Recipe!</h1>
+     <div>
+          <a href="/main" class="btn btn-primary"> Dashboard </a>
+          <a href="/logout" class="btn btn-info"> Logout </a>
+     </div>
+     <form action="/update/recipe" method="post">
+          {% with messages = get_flashed_messages(category_filter=['recipe']) %}
+               {% if messages %}
+               <div>
+                    {% for message in messages %}
+                         <p>{{message}}</p>
+                    {% endfor %}
+               </div>
+               {% endif %}
+          {% endwith %}
+          <div class="marginLeft">
+               <input type="hidden" name="id" value={{edit.id}}>
+               <div>
+                    <div>
+                         <label for="name"> Name: </label>
+                         <input type="text" name="name" class="form-control" value="{{edit.name}}" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                         <label for="description"> Description: </label>
+                         <textarea name="description" class="form-control" placeholder="Description"> {{edit.description}} </textarea>
+                    </div>
+                    <div class="form-group">
+                         <label for="instruction">Instructions:</label>
+                         <textarea name="instruction" class="form-control" placeholder="Instructions"> {{edit.instructions}} </textarea>
+                    </div>
+               </div>
+               <div>
+                    <div>
+                         <label for="date_cooked"> Date Cooked: </label>
+                         <input type="date" name="date_cooked" value="{{edit.date_cooked.strftime('%Y-%m-%d')}}" class="form-control" placeholder="Date">
+                    </div>
+                    <label for="under"> Under 30 Minutes?: </label>
+                    <div>
+                         <input type="radio" name="under" value="0" placeholder="Under">
+                         <label for="0"> No </label>
+                    </div>
+                    <div>
+                         <input type="radio" name="under" value="1" placeholder="Over">
+                         <label for="1"> Yes </label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Edit Recipe" class="btn btn-primary">
+               </div>
+          </div>
+     </form>
+</body>
+</html>

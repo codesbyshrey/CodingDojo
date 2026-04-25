@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <title> Edit Your User Page </title>
+</head>
+<body>
+     <form action="/user/update" method="post">
+     <h3> Edit: {{user.first_name}} {{user.last_name}}</h3>
+     <input type="hidden" name="id" value="{{user.id}}">
+     <div>
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" value="{{user.first_name}}" placeholder="First Name Here">
+     </div>
+     <div>
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" value="{{user.last_name}}" placeholder="Last Name Here">
+     </div>
+     <div>
+          <label for="email">Email</label>
+          <input type="text" name="email" value="{{user.email}}" placeholder="Email@email here">
+     </div>
+     <input type="submit" value="update">
+     <form action="/user/delete" method="post">
+          <input type="hidden" name="id" value="{{user.id}}">
+          <button type="submit"> Delete User </button>
+     </form>
+     
+     <div>
+          <a href="/user"> Main Page </a>
+     </div>
+     </form>
+     
+</body>
+</html>

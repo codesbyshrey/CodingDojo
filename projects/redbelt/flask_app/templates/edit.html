@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Edit {{this_pie.name}} - PyPie Derby 2 </title>
+</head>
+<body>
+    <div>
+        <form action="/dashboard">
+            <input type="submit" value="Dashboard">
+        </form>
+        <form action="/logout">
+            <input type="submit" value="Log Out">
+        </form>
+    </div>
+    <form action="/edit_pie/{{this_pie.id}}" method="post">
+        <h1>Edit {{this_pie.name}}</h1>
+        {% with messages = get_flashed_messages(category_filter=['add_pie']) %}     
+            {% if messages %}
+                {% for message in messages %} 
+                    <p>{{message}}</p>  
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="" value="{{this_pie.name}}">
+        </div>
+        <div>
+            <label for="filling">Filling: </label>
+            <input type="text" name="filling" value="{{this_pie.filling}}"> 
+        </div>
+        <div>
+            <label for="crust">Crust: </label>
+            <input type="text" name="crust" id="" value="{{this_pie.crust}}">
+        </div>
+        <input type="submit" name="" id="" value="Edit Pie">
+    </form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.d-flex {
+     margin-top: 20px;
+ }
+ 
+ .d-flex > div {
+     width: 400;
+     max-width: 400px;
+ }

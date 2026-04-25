@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dojonary</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <!-- Navbar Related  -->
+     <div class="nav">
+          <div class="navbar">
+               <h1 class="navtitle">Dojonary</h1>
+               <ul class="navlinks">
+                    <li><input class="search" type="text" id="search" placeholder="Search"> </li>
+                    <li><button onclick="logout(this)" type="button" class="login"> <span class="logout">Login </span></button></li>
+               <!-- have to change this to say logout later -->
+               </ul>
+          </div>
+     </div>
+
+     <div class="flexmain">
+          <!-- Column 1  -->
+          <div class="col1"> 
+               <div class="ninja">
+                    <div class="information">
+                         <h2 id=word> ninja </h2>
+                         <p> noun </p>
+                         <p> Plural: <span class="italics">ninjas</span> </p>
+                         <button type="button" class="likes" onclick="ninjaLike()"> 13 likes</button>
+                    </div>
+                    <div class="definition">
+                         <p class="def1"> A practioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                    </div>
+               </div>
+
+               <div class="ninja">
+                    <div class="information">
+                         <h2 id="word"> ninja </h2>
+                         <p> noun </p>
+                         <p> Plural: <span class="italics">ninjas</span> </p>
+                         <button type="button" class="likes" onclick="ninjaLike()"> 37 likes</button>
+                    </div>
+                    <div class="definition">
+                         <p class="def2"> A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                    </div>
+               </div>
+
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col2">
+               <div class="information">
+                    <p class="def3"> Dojonary is defined by <span class="bold">YOU</span></p>
+                    <button onclick="removeDefinition(this)" class="addDefinition">
+                         Add Definition
+                    </button>
+               </div>
+          </div>
+     </div>
+
+<script src="./script.js"></script>
+</body>
+</html>

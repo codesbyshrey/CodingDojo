@@ -1,0 +1,135 @@
+<!-- Reigstration form - we'll use CSS for it later in the day
+Consider containing the following input types / tags
+ input text, password, date, radio, checkbox, submit
+ textarea (perhaps a placeholder too)
+ select 
+*for now don't worry about making the form formatted. functionality first
+**potential improvements**
+- make the text and input boxes as separate table columns to maintain alignment (css will cover too prob)
+- use different semantic style to get better spacing than the attempt with p
+- clicking on indicates a required field by making it a label could prompt the stars to be bolded
+-->
+<!DOCTYPE html> 
+     <html>
+          <head>
+               <title>
+                    Registration Form
+               </title>
+               <meta charset="UTF-8">
+               <meta name="Viewport" content="width=device-width, initial-scale=1.0">          
+          </head>
+          <body>
+               <h1>
+                    Registration Form
+               </h1>
+               <form>
+                    <fieldset>
+                         <div>
+                              <label for="firstName">
+                                   First Name: *
+                              </label>
+                              <input type="text" name="firstName" id="firstName">
+                         </div>
+                         <div>
+                              <label for="lastName">
+                                   Last Name: *
+                              </label>
+                              <input type="text" name="lastName" id="lastName">
+                         </div>
+                         <div>
+                              <label for="emailAddress">
+                                   Email Address: *
+                              </label>
+                              <input type="text" name="emailAddress" id="emailAddress">
+                         </div>
+                         <div>
+                              <label for="password">
+                                   Password: *
+                              </label>
+                              <input type="password" name="password" id="password">
+                         </div>
+                         <div>
+                              <label for="confirmPassword">
+                                   Confirm Password: *
+                              </label>
+                              <input type="password" name="confirmPassword" id="confirmPassword">
+                         </div>
+                         <div>
+                              <label for="birthday">
+                                   Birthday:
+                              </label>
+                              <input type="text" name="birthday" id="birthday" placeholder="mm/dd/yyyy">
+                              <input type="date" name="birthday" id="birthday">
+                         </div>
+                         <div>
+                              <label for="genderIdentity">
+                                   Gender Identity:
+                              </label>
+                              <div>
+                                   <input type="radio" name="genderIdentity" id="male">
+                                   <label for="male">
+                                        Male
+                                   </label>
+                                   <input type="radio" name="genderIdentity" id="female">
+                                   <label for="female">
+                                        Female
+                                   </label>
+                                   <input type="radio" name="genderIdentity" id="nonBinary">
+                                   <label for="nonBinary">
+                                        Non-Binary
+                                   </label>
+                                   <input type="radio" name="genderIdentity" id="NA">
+                                   <label for="NA">
+                                        I prefer not to answer.
+                                   </label>
+                              </div>
+                         </div>
+                         <div>
+                              <label for="description">
+                                   A short description about myself:
+                              </label>
+                              <div>
+                                   <textarea name="description" id="description" placeholder="click cursor here to start typing"> </textarea>
+                              </div>
+                         </div>
+                         <div>
+                              <p>
+                                   <label for="favLang">
+                                        Favorite Language: 
+                                   </label>
+                                   <select name="favLang" id="favLang">
+                                        <option>
+                                             JavaScript
+                                        </option>
+                                        <option>
+                                             Python
+                                        </option>
+                                        <option>
+                                             HTML / CSS
+                                        </option>
+                                        <option>
+                                             Swift
+                                        </option>
+                                   </select>
+                              </p>
+                         </div>
+                         <div>
+                              <input type="checkbox" name="emailList" id="emailList">
+                              <label for="emailList">
+                                   Yes, I would like to receive periodic email updates.
+                              </label>
+                         </div>
+                         <div>
+                              <button type="submit" value="createAccount">
+                                   Create Account
+                              </button> 
+                         </div>
+                         <div>
+                              <p>
+                                   * Indicates a required field.
+                              </p>
+                         </div>
+                    </fieldset>
+               </form>
+          </body>
+     </html>
