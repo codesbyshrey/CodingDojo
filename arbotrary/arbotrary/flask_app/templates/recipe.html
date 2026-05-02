@@ -1,0 +1,47 @@
+<!-- this will be the fourth wireframe template
+    has to be the one that leads to editing your tree / updating the recipe
+    dashboard buttons and logout button-->
+
+<!-- NAME = SPECIES
+    DESCRIPTION = LOCATION
+    INSTRUCTIONS = REASON -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title> (6) VIEW RECIPE INFORMATION </title>
+</head>
+<body>
+    <h1> ARBOTRARY </h1>
+    <p> A site to track randomly planted trees </p>
+    <p> This is the TREE DETAILS (6) page </p>
+    <br>
+    <h1> WELCOME TO THIS TREE'S INFORMATION </h1>
+    <p> <a href="/usertrees"> MY TREES (unfinished) </a> </p>
+    <p> <a href="/recipes"> Back to Dashboard </a> </p>
+    <p> <a href="/user/logout"> Logout </a> </p>
+    <h2> {{current_recipe.name}} </h2>
+    <p> PLANTED BY: {{current_recipe.user.first_name}} </p>
+    <div>
+        <p> SPECIES: {{current_recipe.name}} </p>
+        <p> LOCATION PLANTED: {{current_recipe.description}} </p>
+        <p> REASON FOR PLANTING: {{current_recipe.instructions}} </p>
+        <p> DATE PLANTED: {{current_recipe.cooked_date}} </p>
+        {% for recipe in list_recipes: %}
+        {% if session['user_id'] == recipe.user.id : %}
+        <tr>
+            <td> {{recipe.name}} </td>
+            <td> {{recipe.description}} </td>
+            <td> {{recipe.instructions}} </td>
+            <td> {{recipe.user.first_name}} {{recipe.user.last_name}} </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

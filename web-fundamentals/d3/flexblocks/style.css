@@ -1,0 +1,48 @@
+.container{
+    width: 950px;
+    background-color: silver;
+    margin: 0px auto; 
+    padding: 20px; /* the padding across the entire container is what allows us to not bother with the margin left on the blue side nav */
+
+    /* In class we considered the option to do gap if the top container was being treated as a block, but didn't address since it's outside the scope of the practice problem */ 
+}
+.top-nav {
+    height: 150px;
+    background-color: green;
+    margin-bottom: 20px;
+}
+.side-nav {
+    height: 300px;
+    width: 200px;
+    background-color: blue;
+    /* margin-left: 20px; needs to only be addressing main?*/
+}
+.main {
+    height: 400px;
+    width: 700px;
+    background-color: red;
+    margin-left: 20px;
+    padding: 10px;
+}
+.sub-content {
+    height: 200px;
+    width: 210px;
+    background-color: yellow;
+    margin: 20px;
+}
+#advertisement {
+    height: 120px;
+    width: 660px;
+    background-color: purple;
+    margin: 10px; /* technically only needed on top */
+}
+.row {
+    /* TODO - what should go here? */
+    /* note that with the flex options in row, it only goes one parent down. Hence why our CSS code applies the row class to the yellow elements as well*/
+    display: flex;
+}
+
+/* wonder how come the right side of the red isn't in line with the green. perhaps instead of padding we should attempt to do margins within the classes under the entire container */
+
+/* consider adding black borders to containers to help understand gaps of margin and padding until it visually becomes more natural */
+

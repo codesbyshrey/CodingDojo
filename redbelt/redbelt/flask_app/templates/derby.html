@@ -1,0 +1,42 @@
+<!-- this page is almost done, minimal interference needed left -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> PyPie Derby Pies! Vote Here</title>
+     <!--
+          Dashboard and Logout pages, with Dashboard page taking you to dashboard of logged in user.Can't access these w/out loginreg
+          Pie names are anchor tags referenced to the pie desc/voting page
+          PyPie by {{user.first_name}} and Vote Counter increases (js functionality of counter?)
+     -->
+</head>
+<body>
+     <div class="dashLink">
+          <a href="/" class="buttonLink"> DASHBOARD </a>
+          <a href="/logout" class="buttonLink"> LOG OUT </a>
+     </div>
+     <div>
+          <h1> PyPie Derby </h1>
+     </div>
+     <table class="table table-dark">
+          <tr>
+               <th> Name </th>
+               <th> PyPie By </th>
+               <th> Votes! </th>
+          </tr>
+          <!-- for loop to iterate over data and refresh the table -->
+          {% for pie in all_pies %}
+               <tr>
+                    <td> <a href="/show/{{pie.id}}/{{pie.user_first}}"> {{pie.name}} </a></td>
+                    <td> {{pie.user_name}}</td>
+                    <td> {{pie.votes}} </td>
+               </tr>
+          {% endfor %}
+     </table>
+</body>
+</html>

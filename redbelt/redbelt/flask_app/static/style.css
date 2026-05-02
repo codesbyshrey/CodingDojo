@@ -1,0 +1,33 @@
+*{
+     margin: 10px;
+     padding: 10px;
+     background-color: tan;
+}
+
+.main {
+     display: flex;
+     height: auto;
+     border: 2px solid black;
+}
+
+.buttonLink {
+     background-color: slategray;
+     border: 2px solid black;
+     border-radius: 10%;
+     color: black;
+     text-align: center;
+     padding: 10px 0px;
+     box-shadow: 3px 3px black;
+}
+
+.button {
+     background-color: limegreen;
+     border: 2px solid black;
+     border-radius: 15%;
+     text-align: center;
+     box-shadow: 3px 3px black;
+}
+
+.leftPanel, .rightPanel {
+     border: 2px solid black;
+}

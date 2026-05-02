@@ -1,5 +1,0 @@
-package com.codingdojo.dojosninjas.repositories;
-
-public interface DojoRepository {
-
-}

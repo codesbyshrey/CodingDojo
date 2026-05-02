@@ -1,0 +1,55 @@
+/* CSS Reset */
+
+* {
+     padding: 0;
+     margin: 0;
+}
+
+main{
+     width: 600px;
+     height: 600px;
+     border: 2px solid black;
+     font-size: 20px;
+     display: flex;
+     justify-content: center;
+     background-color:grey;
+}
+
+.inputName{
+     border: 2px solid black;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     padding: 15px;
+     border-radius: 25%;
+     background-color: silver;
+}
+.nameBox{
+     height: 30px;
+     margin-left: 25px;
+}
+.locationTag{
+     border: 2px osolid black;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     padding: 15px;
+}
+.languageTag{
+     border: 2px osolid black;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     padding: 15px;
+}
+
+.completeForm{
+     width: 600px;
+     height: 600px;
+     border: 2px solid black;
+     font-size: 20px;
+     display: flex;
+     justify-content: center;
+     background-color:grey;
+}
+.compForm{
+     margin: 20px;
+     padding: 20px;
+}

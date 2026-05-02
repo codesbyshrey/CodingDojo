@@ -1,0 +1,38 @@
+<!-- this page is almost done, minimal interference needed left -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/ iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     <title> PyPie Derby VOTE HERE</title>
+     <!--
+          Dashboard and Logout buttons as expected
+          URL should be redirected as /show/<int:pie.id>
+          Delicous button will CAST A VOTE (counter feature) and automatically redirect back to the derby.html page (/pies)
+          Voting for own pie allowed or not? DON'T THINK ABOUT THIS
+     -->
+</head>
+<body>
+     <div class="dashLink">
+          <a href="/pies" class="buttonLink"> PIE DERBY </a>
+          <a href="/logout" class="buttonLink"> LOG OUT </a>
+     </div>
+
+     <div class="displayPie">
+          <!-- display the pie -->
+          {% if pie %}
+          <h1> {{pie.name}} by {{user_first}} </h1>
+          <p class="describePie">
+               {{pie.filling}} with {{pie.crust}}
+          </p>
+          <p class="describePie"> Cast Your Vote: </p>
+          <!-- black belt includes saying user should take back if already voted? should be a simple enough if statement I think -->
+          <a href="/pie/vote/{{pie.id}}" class="votelink"> DELICIOUS </a>
+          {% endif %}
+     </div>
+</body>
+</html>

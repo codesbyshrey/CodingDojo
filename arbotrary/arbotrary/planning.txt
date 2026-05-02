@@ -1,0 +1,26 @@
+ok the planning has to end by 9:30
+exam started at 9:03, exam submission at 1403
+
+Wireframe looks more or less the same as recipes meets pypie derby
+
+Models --> Tree, User
+Controllers --> Trees, Users
+
+All user stuff --> TEST TERATIVELY AND REPEATEADLY. DO NOT BUILD ALL AT ONCE.
+ -> luckily user materials are all the same as login registration materials
+
+Templates:
+1. login.html
+2. dashboard.html
+3. edit.html
+4. newtree.html
+5. view.html
+
+Models ERD planning
+ --> database = "arbotrary_db"
+
+User --> id, first_name, last_name, email, password, created_at, updated_at
+Tree --> id, species, location, reason, date_planted, CA, UA 
++ user_id
+
+JUST START RECREATING RECIPES FIRST AND THEN START RENAMING TO TREES

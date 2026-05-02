@@ -1,5 +1,0 @@
-package com.codingdojo.jpa.repositories;
-
-public class CrudRepository {
-
-}

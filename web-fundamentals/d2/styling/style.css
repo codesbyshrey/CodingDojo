@@ -1,0 +1,45 @@
+/* styling practice assignment 
+     "MyCloud" left aligned, black background, boxed. My with white color, cloud in teal
+     "Completed Projects:" in italics, center aligned, purple background, white color, boxed
+     Contact Us" right aligned, underlined, hyperlink? or black color with light blue background, boxed
+     - progressively smaller font sizes, h1 h2 h3
+     - all in boxed of their own colors, padding, text decoration, and fontstyle comic sans lol
+     - may need to use span element to wrap text inside of h1 for diff colors
+     
+     !! --> figure out how to get the text aligned mid block*/
+
+*{
+     font-family:sans-serif;
+
+}
+
+h1{ 
+     color:white;
+     background-color:black;
+     text-align: left; /* technically not needed */
+}
+
+h2{ 
+     color:white;
+     background: purple;
+     text-align: center;
+     font-style: italic;
+}
+
+h3{
+     color: darkblue;
+     background-color: lightblue;
+     text-align: right;
+     text-decoration: underline;
+}
+
+#box{
+     margin: 10px;
+     height: 30px;
+     padding: 15px;
+     display: block;
+}
+
+span{
+     color: cyan;
+}

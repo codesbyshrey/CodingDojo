@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+<!-- above is mandatory to have jstl tagging, and pom.xml-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- for Bootstrap CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- YOUR own local CSS -->
+<link rel="stylesheet" href="/css/style.css"/>
+<!-- LOCATED IN SRC/MAIN/RESOURCES/STATIC-->
+<title>OMIKUJI</title>
+</head>
+<body>
+	<div>
+		<h1> Here's Your Omikuji !!</h1>
+		
+		<div style="border: 2px solid black; background-color: teal;">
+			<h3> <c:out value="${fortune}"/> </h3>
+		</div>
+		
+		<a class="btn btn-link" href="/omikuji"> Go Back </a>
+	</div>
+</body>
+</html>
+

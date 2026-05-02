@@ -1,0 +1,29 @@
+* {
+     margin: 4px;
+     padding: 4px;
+}
+
+div {
+     border: 1px solid black;
+}
+
+input {
+     background-color: tan;
+}
+
+a {
+     background-color: azure;
+}
+
+button {
+     background-color: azure;
+     box-shadow: 3px 3px 3px 3px solid black;
+}
+
+tr, td {
+     border: 1px solid black;
+}
+
+label {
+     font-weight:bold ;
+}

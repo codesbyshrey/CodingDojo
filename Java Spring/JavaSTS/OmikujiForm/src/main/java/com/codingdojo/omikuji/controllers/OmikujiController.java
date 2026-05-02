@@ -1,0 +1,59 @@
+package com.codingdojo.omikuji.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class OmikujiController {
+	
+	@GetMapping("/")
+	public String index() {
+		return "redirect:/omikuji";
+	}
+	
+	@GetMapping("/omikuji")
+	public String omikuji() {
+		return "index.jsp";
+	}
+	
+	// POST route for form submission
+	@PostMapping("/submit")
+	public String submit(
+			@RequestParam(value="number") int number,
+			@RequestParam(value="city") String city,
+			@RequestParam(value="person") String person,
+			@RequestParam(value="profession") String profession,
+			@RequestParam(value="patronus") String patronus,
+			@RequestParam(value="compliment") String compliment,
+			HttpSession session
+			) {
+		// Request mapping to handle processing information
+		String fortune = String.format(
+				"In %s years you will live in %s with %s as your roomate, %s. The next time you see a %s, you will have good luck. Also, %s.", 
+				number, city, person, profession, patronus, compliment);
+		session.setAttribute("fortune", fortune);
+		
+		// Alternatively setAttribute individually for each item
+			// means model.addAttribute and c:out on .jsp files would also have to be done individually
+		
+		return "redirect:omikuji/show";
+	}
+	
+	//Route to dynamically render omikuji fortune
+	@GetMapping("/omikuji/show")
+	public String show(HttpSession session, Model model) {
+		
+		//Carry the entire string through session, retaining most recent submission
+		String fortune = (String) session.getAttribute("fortune");
+		model.addAttribute("fortune", fortune);
+		
+		return "omikuji.jsp";
+	}
+	
+
+}
